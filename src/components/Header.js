@@ -9,12 +9,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Logo from './img/Logo2.png';
-
 const pages = ['Pientavarat', 'Suurtavarat', 'DJ-Palvelut'];
 
-function ResponsiveAppBar() {
+function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -29,27 +27,21 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 6 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
+          <Box
+            component="img"
             sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 1500,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
+            display: { xs: 'none', md: 'flex' },
+            minHeigth:64,
+            minWidth:128,
+            maxHeight:120,
+            maxWidth:246,
             }}
-          >
-            LOGO
-          </Typography>
+            alt="Luminary Events logo."
+            src={Logo}
+        />
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, mr: -5 }}>
+
+          <Box sx={{display: { xs: 'flex', md: 'none' }, mr: -8}}>
             <IconButton
               size="small"
               aria-controls="menu-appbar"
@@ -59,6 +51,7 @@ function ResponsiveAppBar() {
             >
               <MenuIcon />
             </IconButton>
+            
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -79,36 +72,32 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center" sx={{ fontWeight: '800' }}>{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
+          <Box
+            component="img"
             sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.5rem',
-              color: 'inherit',
-              textDecoration: 'none',
+            display: { xs: 'flex', md: 'none' },
+            flexGrow: 0.1,
+            minHeigth:64,
+            minWidth:128,
+
+            maxHeight:120,
+            maxWidth:246,
+            margin: 'auto',
             }}
-          >
-            LOGO
-          </Typography>
+            alt="Luminary Events logo."
+            src={Logo}
+        />
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, mx: 3, color: 'white', display: 'block',fontWeight: '800'}}
               >
                 {page}
               </Button>
@@ -119,4 +108,4 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default Header;
