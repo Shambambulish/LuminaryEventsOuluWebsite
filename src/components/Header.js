@@ -10,11 +10,13 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from './img/Logo2.png';
+import { Link, useNavigate } from 'react-router-dom';
+
 const pages = ['Pientavarat', 'Suurtavarat', 'DJ-Palvelut'];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-
+  const navigate = useNavigate();
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -27,6 +29,7 @@ function Header() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+        <Link to="/">
           <Box
             component="img"
             sx={{
@@ -38,10 +41,10 @@ function Header() {
             }}
             alt="Luminary Events logo."
             src={Logo}
-        />
+          />
+        </Link>
 
-
-          <Box sx={{display: { xs: 'flex', md: 'none' }, mr: -8}}>
+          <Box sx={{display: { xs: 'flex', md: 'none' }, mr: -5}}>
             <IconButton
               size="small"
               aria-controls="menu-appbar"
@@ -71,9 +74,11 @@ function Header() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+              <Link key={page} to={`/${page}`} style={{ textDecoration: 'none' }}>
+                <MenuItem onClick={handleCloseNavMenu}>
                   <Typography textAlign="center" sx={{ fontWeight: '800' }}>{page}</Typography>
                 </MenuItem>
+              </Link>
               ))}
             </Menu>
           </Box>
@@ -84,24 +89,27 @@ function Header() {
             flexGrow: 0.1,
             minHeigth:64,
             minWidth:128,
-
             maxHeight:120,
             maxWidth:246,
             margin: 'auto',
+            cursor: 'pointer',
             }}
             alt="Luminary Events logo."
             src={Logo}
-        />
+            onClick={() => navigate('/')}
+            />
+
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, mx: 3, color: 'white', display: 'block',fontWeight: '800'}}
-              >
-                {page}
-              </Button>
+              <Link key={page} to={`/${page}`} style={{ textDecoration: 'none' }}>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, mx: 3, color: 'white', display: 'block',fontWeight: '800'}}>
+                  {page}
+                </Button>
+              </Link>
             ))}
+
           </Box>
         </Toolbar>
       </Container>

@@ -1,6 +1,11 @@
+import Header from "./Header";
+import Footer from "./Footer";
+
 const Frontpage = () => {
 
     return (
+        <div>
+        <Header/>
         <div className="responsive-container">
             <div className="slogan">Luminary Events Oulu, se täyden palvelun monipuolinen audiotalo.</div>
             <br/>
@@ -22,6 +27,10 @@ const Frontpage = () => {
             <div className="contactinfo">Sähköposti: contact@luminaryevents.fi
 
                 Puhelinnumero: +358 45 893 1112</div>
+
+                <p><h2>FRONT</h2></p>
+        </div>
+        <Footer/>
         </div>
     );
 };
