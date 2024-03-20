@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+.background{
+    background: pink;
+}
+
+
+.text-container{
+    text-align:center;
+}
+.textblock{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+}
+
+.slogan{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+}
+
+.subquestion{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+}
+
+.contactinfo{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+}
