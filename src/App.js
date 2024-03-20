@@ -1,15 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-import Header from './components/Header';
-import Frontpage from "./components/Frontpage";
+import React from "react"
+import Footer from "./components/Footer.js";
 
-function App() {
-  return (
-    <div className="App">
-      <Header/>
-      <Frontpage/>
-    </div>
+
+const App = () => (
+ <div className="App">
+  <Footer />
+ </div>
   );
-}
-
 export default App;

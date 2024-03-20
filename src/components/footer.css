@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    justify-content: space-between; /* This will push the content to the sides */
+    align-items: center; /* This will vertically center the content */
+    background-color: rgb(240, 68, 240);
+    border-top: 2px solid red;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: white;
+    font-size:20px;
+}
+
+.footer p {
+    margin: 0; /* Remove default margin */
+}
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        align-items: flex-start; /* Align content to the start on smaller screens */
+    }
+}
