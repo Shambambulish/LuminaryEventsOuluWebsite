@@ -1,6 +1,6 @@
 .footer {
     display: flex;
-    justify-content: space-between; /* This will push the content to the sides */
+    justify-content: center; /* This will keep the contents centered */
     align-items: center; /* This will vertically center the content */
     background-color: #201C24;
     border-top: 2px solid #201C24;
