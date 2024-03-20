@@ -1,10 +1,11 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Frontpage.css";
+import background from "./img/bg.jpeg"
 const Frontpage = () => {
 
     return (
-        <div className="background">
+        <div className="background" >
             <Header/>
             <div>
                 <div className="text-container">
@@ -30,6 +31,19 @@ const Frontpage = () => {
                     <div className="contactinfo">Sähköposti: contact@luminaryevents.fi
 
                         Puhelinnumero: +358 45 893 1112
+                        Puhelinnumero: +358 45 893 1112
+                        Puhelinnumero: +358 45 893 1112
+                        Puhelinnumero: +358 45 893 1112
+                        Puhelinnumero: +358 45 893 1112
+                        Puhelinnumero: +358 45 893 1112
+                        Puhelinnumero: +358 45 893 1112
+                        Puhelinnumero: +358 45 893 1112
+                        Puhelinnumero: +358 45 893 1112
+                        Puhelinnumero: +358 45 893 1112
+                        Puhelinnumero: +358 45 893 1112
+                        Puhelinnumero: +358 45 893 1112
+                        Puhelinnumero: +358 45 893 1112
+                        
                     </div>
                 </div>
             </div>
