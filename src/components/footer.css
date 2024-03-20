@@ -25,3 +25,8 @@
         align-items: flex-start; /* Align content to the start on smaller screens */
     }
 }
+
+.logo {
+    width: 10%;
+    height: 10%;
+}

@@ -1,12 +1,21 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Frontpage.css";
-import background from "./img/bg.jpeg"
-const Frontpage = () => {
+import logo from "./img/logo.png";
 
+const Frontpage = () => {
+                //!!! banner grid not working quite as intended !!!
     return (
         <div className="background">
             <Header/>
+            <div className="banner">
+                <div className="banner-grid">
+                    <img src={logo} alt="Luminary Events logo" className="banner-logo"/>
+                    <div className="slogan">Mainospuhe: mallia super epic</div>
+                    <br/>
+                    <div className="textblock">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis libero ipsum</div>
+                </div>
+            </div>
             <div>
                 <div className="text-container">
                     <div className="slogan">Luminary Events Oulu, se täyden palvelun monipuolinen audiotalo.</div>

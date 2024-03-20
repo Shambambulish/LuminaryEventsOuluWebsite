@@ -1,8 +1,10 @@
 import React from "react";
 import "./footer.css";
+import logo from "./img/logo.png";
 
 const Footer = () => (
     <footer className="footer">
+        <img src={logo} alt="Luminary Events logo" className="logo"/>
         <div>
             <p>Luminary Events Oulu | Y-tunnus: 3392013-7</p>
             <p><a href="https://www.instagram.com/luminaryevents_oulu/">Instagram: Luminary Events Oulu</a></p>
