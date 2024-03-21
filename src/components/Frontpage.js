@@ -11,9 +11,7 @@ const Frontpage = () => {
             <div className="banner">
                 <div className="banner-grid">
                     <img src={logo} alt="Luminary Events logo" className="banner-logo"/>
-                    <div className="slogan">Mainospuhe: mallia super epic</div>
-                    <br/>
-                    <div className="textblock">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis libero ipsum</div>
+                    <div className="textblock">Mainospuhe: mallia super epic</div>
                 </div>
             </div>
             <div>
