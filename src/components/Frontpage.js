@@ -2,6 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import "./Frontpage.css";
 import logo from "./img/logo.png";
+import logo2 from "./img/Logo2.png"
 
 const Frontpage = () => {
                 //!!! banner grid not working quite as intended !!!
@@ -9,10 +10,7 @@ const Frontpage = () => {
         <div className="background">
             <Header/>
             <div className="banner">
-                <div className="banner-grid">
-                    <img src={logo} alt="Luminary Events logo" className="banner-logo"/>
                     <div className="textblock">Mainospuhe: mallia super epic</div>
-                </div>
             </div>
             <div>
                 <div className="text-container">
@@ -41,6 +39,9 @@ const Frontpage = () => {
                         Puhelinnumero: +358 45 893 1112
                         <br/>
                     </div>
+                </div>
+                <div className="text-container">
+                    to be inserted: contact me frame
                 </div>
             </div>
             <Footer/>
