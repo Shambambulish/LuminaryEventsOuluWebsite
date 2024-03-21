@@ -1,5 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import ConForm from "./ConForm";
+
 
 const Frontpage = () => {
 
@@ -29,6 +31,10 @@ const Frontpage = () => {
                 Puhelinnumero: +358 45 893 1112</div>
 
                 <p><h2>FRONT</h2></p>
+
+            <div> 
+                <ConForm/>
+            </div>
         </div>
         <Footer/>
         </div>

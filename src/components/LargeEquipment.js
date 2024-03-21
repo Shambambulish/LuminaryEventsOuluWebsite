@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import ConForm from "./ConForm";
 
 const LargeEquipment = () => {
 
@@ -29,6 +30,10 @@ const LargeEquipment = () => {
                 Puhelinnumero: +358 45 893 1112</div>
 
                 <p><h2>LARGE EQUIPMENT</h2></p>
+
+            <div> 
+                <ConForm/>
+            </div>
         </div>
         <Footer/>
         </div>
