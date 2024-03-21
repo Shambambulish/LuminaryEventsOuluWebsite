@@ -3,17 +3,15 @@ import Footer from "./Footer";
 import logo from "./img/logo.png";
 import React from "react";
 import dj from "./img/luminarydj.jpg"
+import "./Frontpage.css";
 
 const DjServices = () => {
 
     return (
         <div className="background">
             <Header/>
-            <div className="banner">
-                <div className="textblock">Mainospuhe: mallia super epic</div>
-            </div>
-            <div>
-                <div className="text-container">
+            <div className="dj-grid">
+                <div className="text-container-grid">
                     <div className="slogan">Luminary Events Oulu, se täyden palvelun monipuolinen audiotalo.</div>
                     <br/>
                     <div className="textblock">Luminary Events Oulu tarjoaa myös tapahtumia yritys- sekä
@@ -40,13 +38,14 @@ const DjServices = () => {
                         <br/>
                     </div>
                 </div>
-                <div className="text-container">
+                <div className="image-container">
                     <img src={dj} alt="dj" className="dj"/>
                 </div>
-                <div className="text-container">
+            </div>
+            <br/>
+            <div className="text-container">
                     to be added: media of dj concerts
                 </div>
-            </div>
             <Footer/>
         </div>
 
