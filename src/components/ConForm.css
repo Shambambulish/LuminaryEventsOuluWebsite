@@ -1,23 +1,14 @@
 .contact-form {
-    
+    display: inline-block;
     color: white;
     font-size:20px;
+    position: relative;
+    text-align:center;
+}
 
-}
-.conformbg {
-    background-color: #201C24;
-    opacity: 0.8;
-    /* CSS3 */
-    width: fit-content;
-    height: fit-content;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 25px;
-    position:relative;
-}
 
 .nappi {
-  background-color: #07070a; /* Green */
+  background-color: #28282e; /* Green */
   border: none;
   color: white;
   padding: 10px 20px;
@@ -31,7 +22,7 @@
 }
 
 .nappi:hover {
-    background-color: #000000; /* Green */
+    background-color: #110f16; /* Green */
     color: white;
   }
 
