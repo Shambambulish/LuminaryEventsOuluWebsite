@@ -2,7 +2,9 @@ import Header from "./Header";
 import Footer from "./Footer";
 import "./Frontpage.css";
 import logo from "./img/logo.png";
-import logo2 from "./img/Logo2.png"
+import logo2 from "./img/Logo2.png";
+import ConForm from "./ConForm";
+
 
 const LargeEquipment = () => {
     //!!! banner grid not working quite as intended !!!
@@ -41,7 +43,7 @@ const LargeEquipment = () => {
                     </div>
                 </div>
                 <div className="text-container">
-                    to be inserted: contact me frame
+                    <ConForm/>
                 </div>
             </div>
             <Footer/>
