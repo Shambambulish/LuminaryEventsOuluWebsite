@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 .css-hip9hq-MuiPaper-root-MuiAppBar-root{
-    background-color: #201C24;
+    background-color: #201C24 !important;
     border-bottom-left-radius: 35px;
     border-bottom-right-radius: 35px;
 }
