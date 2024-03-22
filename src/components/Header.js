@@ -89,7 +89,7 @@ function Header() {
         </Box>
         </Link>
 
-          <Box sx={{display: { xs: 'flex', md: 'none',}, mr: -12}}>
+          <Box sx={{display: { xs: 'flex', md: 'none',}, mr: -8}}>
             
             <IconButton
               size="small"
@@ -189,7 +189,7 @@ function Header() {
                   fontFamily: 'Quicksand, sans-serif',
                   fontWeight: 350,
                   fontSize: '1.3em',
-                  marginRight: '3em',
+                  marginRight: '2em',
                   ':hover': {
                   animation: 'forwards fadeIn 0.5s',
                   fontWeight: 600,

@@ -8,7 +8,7 @@ const Footer = () => (
     <footer className="footer">
         <div className="leftedge">
         <img src={logo} alt="Luminary Events logo" className="logo"/>
-        <div>
+        <div className="needtomove">
             <p>Luminary Events Oulu | Y-tunnus: 3392013-7</p>
             
             <div className="grammy">
@@ -30,8 +30,8 @@ const Footer = () => (
                 
                 <div className="contact">
                     <p>Liusketie 7</p>
-                    <br/>
-                    <p>90620 Oulu</p>
+                    <p>90620, Oulu</p>
+                    <p>+ 358 45 983 1112</p>
                 </div>
         </div>
     </footer>
