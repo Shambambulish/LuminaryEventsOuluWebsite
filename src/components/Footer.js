@@ -5,6 +5,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import PlaceIcon from '@mui/icons-material/Place';
 
 const Footer = () => (
+    <div className="topspace">
     <footer className="footer">
         <div className="leftedge">
         <img src={logo} alt="Luminary Events logo" className="logo"/>
@@ -35,6 +36,7 @@ const Footer = () => (
                 </div>
         </div>
     </footer>
+    </div>
 );
 
 export default Footer;

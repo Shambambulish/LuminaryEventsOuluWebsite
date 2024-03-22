@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-
+.topspace{
+    margin-top: 10em;
+}
 .footer {
     display: flex;
     justify-content: start;
@@ -130,6 +132,9 @@
 }
 
 @media only screen and (max-width: 510px) {
+    .topspace{
+        margin-top: 15em;
+    }
 
     .footer{
         min-width: 300px;
