@@ -1,9 +1,9 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Frontpage.css";
-import logo from "./img/logo.png";
-import logo2 from "./img/Logo2.png";
 import ConForm from "./ConForm";
+import React from "react";
+import PlaceIcon from '@mui/icons-material/Place';
 
 
 const LargeEquipment = () => {
@@ -11,41 +11,81 @@ const LargeEquipment = () => {
     return (
         <div className="background">
             <Header/>
-            <div className="banner">
-                <div className="textblock">Mainospuhe: mallia super epic</div>
-            </div>
-            <div>
-                <div className="text-container">
-                    <div className="slogan">Luminary Events Oulu, se täyden palvelun monipuolinen audiotalo.</div>
+            <div className="dj-grid">
+                <div className="text-container-grid">
+                    <div className="slogan">Esine 1</div>
                     <br/>
-                    <div className="textblock">Meiltä joustavat ratkaisut kaikenlaisiin tapahtumiin tarvitset sitten
-                        DJ:tä,
-                        Bändin ääniteknikkoa tai Kaiutin- / valovuokrausta.
+                    <div className="textblock">Ipsum Lorem
                     </div>
                     <br/>
-                    <div className="subquestion">Miksi valita meidät?</div>
+                    <div className="subquestion">Lisätietoja esineestä</div>
                     <br/>
-                    <div className="textblock">Jokaiseen tarjoukseen kuuluu kuljetus, asennus ja koko tapahtuma-ajan
-                        voimassa
-                        oleva tekninen tuki, jolla voit olla varma tapahtumasi onnistumisesta.
+                    <div className="textblock">lisätietoja: ei ole
+
                     </div>
                     <br/>
-                    <div className="textblock">Lisäksi tarjolla myös edullista ja helppoa yksittäislaitevuokrausta.
-                        Kymmenen vuoden kokemuksella, Luminary Events. Kysy ilmainen tarjous nyt!
+                    <div className="subquestion">Mitä lisälaitteita/kaapeleita/ym tämä tarvitsee?
                     </div>
                     <br/>
-                    <div className="slogan">Kymmenen vuoden kokemuksella, Luminary Events.</div>
-                    <div className="contactinfo">
-                        <br/>
-                        Sähköposti: contact@luminaryevents.fi
-                        Puhelinnumero: +358 45 893 1112
-                        <br/>
-                    </div>
+                    <div className="textblock">lisätietoja: ei ole</div>
+                    <br/>
+                    <div className="textblock">saatavilla x kappaletta</div>
                 </div>
-                <div className="text-container">
-                    <ConForm/>
+                <div className="image-container">
+                    <img src={PlaceIcon} alt="dj" className="dj"/>
                 </div>
             </div>
+            <br/>
+            <div className="dj-grid">
+                <div className="text-container-grid">
+                    <div className="slogan">Esine 2</div>
+                    <br/>
+                    <div className="textblock">Lorem ipsum
+                    </div>
+                    <br/>
+                    <div className="subquestion">Lisätietoja esineestä</div>
+                    <br/>
+                    <div className="textblock">lisätietoja: ei ole
+
+                    </div>
+                    <br/>
+                    <div className="subquestion">Mitä lisälaitteita/kaapeleita/ym tämä tarvitsee?
+                    </div>
+                    <br/>
+                    <div className="textblock">lisätietoja: ei ole</div>
+                    <br/>
+                    <div className="textblock">saatavilla x kappaletta</div>
+                </div>
+                <div className="image-container">
+                    <img src={PlaceIcon} alt="dj" className="dj"/>
+                </div>
+            </div>
+            <br/>
+            <div className="dj-grid">
+                <div className="text-container-grid">
+                    <div className="slogan">Esine 3</div>
+                    <br/>
+                    <div className="textblock">musip meroL
+                    </div>
+                    <br/>
+                    <div className="subquestion">Lisätietoja esineestä</div>
+                    <br/>
+                    <div className="textblock">lisätietoja: ei ole
+
+                    </div>
+                    <br/>
+                    <div className="subquestion">Mitä lisälaitteita/kaapeleita/ym tämä tarvitsee?
+                    </div>
+                    <br/>
+                    <div className="textblock">lisätietoja: ei ole</div>
+                    <br/>
+                    <div className="textblock">saatavilla x kappaletta</div>
+                </div>
+                <div className="image-container">
+                    <img src={PlaceIcon} alt="dj" className="dj"/>
+                </div>
+            </div>
+            <ConForm/>
             <Footer/>
         </div>
     );
