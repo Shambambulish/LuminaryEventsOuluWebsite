@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
 .footer {
     display: flex;
     justify-content: start;
     align-items: center;
     background-color: #201C24;
-    position: fixed;
+    position: absolute;
     width: 100%;
     padding: 0.5em;
     bottom: 0;
     margin-top: auto;
+    font-family: Quicksand, sans-serif; 
     color: #F2F3F5;
     font-size:20px;
     box-sizing: border-box;
@@ -56,7 +60,7 @@
     width: 4em;
     height: 4em;
     margin: 0;
-    margin-right: 1.5em;
+    margin-right: 0.5em;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -75,9 +79,6 @@
 .contact p{
     margin: 0; 
     white-space: nowrap;
-    margin-right: 0.2em;
-    margin-top: 0.4em;
-    text-align: right;
 }
 
 .leftedge{
@@ -91,35 +92,76 @@
 
 
 @media only screen and (max-width: 830px) {
-    .footer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .footer p{
-        white-space: normal;
-    }
 
-    .contact{
-        display: flex;
-        flex-direction: row;
-        margin-left: -1.5em;
-        margin-top: -3em;
-        justify-content: space-between;
+
+    .footer p{
+        scale: 0.8;
+        margin-left: -2em;
     }
-    .contact p{
-        margin-right: 1em;
+    .grammy{
+        margin-left: -0.1em;
+    }
+    .grammy p{
+        margin-left: -0.6em;
+    }
+    .leftedge{
+        width: 5%;
+        scale: 0.8;
+        justify-content: start;
     }
     .rightedge{
-        justify-content: start;
-        width: 100%;
-        margin-left: 5.5em;
-    }  
+        margin-right: -2em;
+        scale: 0.8;
+    }
+    .logo{
+        scale: 1;
+    }
+    .contact{
+        align-items: flex-end;
+        margin-left: -1em;
+    }
+ 
     .location{
-        margin: 0;
+        margin-right: 0.2em;
     }
     .line{
         display: none;
     }
 }
 
+@media only screen and (max-width: 510px) {
+
+    .footer{
+        min-width: 300px;
+        flex-direction: column;
+    }
+    .footer p{
+        justify-content: start;
+    }
+    .grammy{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    .leftedge{
+        justify-content: center;
+    }
+    .rightedge{
+        justify-content: center;
+        margin-left: -2.4em;
+    }
+    .line{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    .location{
+        align-items: start;
+        margin-right: 0.5em;
+    }
+    .contact{
+        align-items: center;
+    }
+}
 
