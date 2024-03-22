@@ -1,10 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Frontpage.css";
-import logo from "./img/logo.png";
-import logo2 from "./img/Logo2.png";
 import ConForm from "./ConForm";
-import dj from "./img/luminarydj.jpg";
 import React from "react";
 import PlaceIcon from '@mui/icons-material/Place';
 
