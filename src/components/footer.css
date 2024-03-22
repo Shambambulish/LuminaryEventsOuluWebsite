@@ -1,32 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.topspace{
+    margin-top: 10em;
+}
 .footer {
     display: flex;
-    justify-content: center; /* This will keep the contents centered */
-    align-items: center; /* This will vertically center the content */
+    justify-content: start;
+    align-items: center;
     background-color: #201C24;
-    border-top: 2px solid #201C24;
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: 100%;
-    padding: 2%;
+    padding: 0.5em;
     bottom: 0;
     margin-top: auto;
-    color: white;
+    font-family: Quicksand, sans-serif; 
+    color: #F2F3F5;
     font-size:20px;
     box-sizing: border-box;
 }
 
-.footer p {
-    margin: 0; /* Remove default margin */
+.logo {
+    margin-left: 0.5em;
+    margin-right: 1em;
+    width: 4em;
+    height: 4em;
 }
 
-@media only screen and (max-width: 768px) {
-    .footer {
-        flex-direction: column; /* Stack content vertically on smaller screens */
-        align-items: flex-start; /* Align content to the start on smaller screens */
+.footer p {
+    margin: 0;
+    margin-left: 0.1em; 
+    white-space: nowrap;
+    align-items: center;
+}
+
+.grammy{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.grammy p{
+    margin-left: 0.5em;
+    align-items: center;
+}
+
+.line{
+    display: flex;
+    justify-content: start;
+    border-right: 2px solid #F2F3F5;
+    height: 4.5em;
+    margin-right: 2.5em;
+    margin-left: 2.5em;
+}
+.rightedge{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    margin-right: 0.5em;
+}
+.location{
+    width: 4em;
+    height: 4em;
+    margin: 0;
+    margin-right: 0.5em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    top: 0.3em;
+}
+
+.contact{
+    width: 4em;
+    height: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.contact p{
+    margin: 0; 
+    white-space: nowrap;
+}
+
+.leftedge{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+
+@media only screen and (max-width: 830px) {
+
+
+    .footer p{
+        scale: 0.8;
+        margin-left: -2em;
+    }
+    .grammy{
+        margin-left: -0.1em;
+    }
+    .grammy p{
+        margin-left: -0.6em;
+    }
+    .leftedge{
+        width: 5%;
+        scale: 0.8;
+        justify-content: start;
+    }
+    .rightedge{
+        margin-right: -2em;
+        scale: 0.8;
+    }
+    .logo{
+        scale: 1;
+    }
+    .contact{
+        align-items: flex-end;
+        margin-left: -1em;
+    }
+ 
+    .location{
+        margin-right: 0.2em;
+    }
+    .line{
+        display: none;
     }
 }
 
-.logo {
-    width: 10%;
-    height: 10%;
+@media only screen and (max-width: 510px) {
+    .topspace{
+        margin-top: 15em;
+    }
+
+    .footer{
+        min-width: 300px;
+        flex-direction: column;
+    }
+    .footer p{
+        justify-content: start;
+    }
+    .grammy{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    .leftedge{
+        justify-content: center;
+    }
+    .rightedge{
+        justify-content: center;
+        margin-left: -2.4em;
+    }
+    .line{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    .location{
+        align-items: start;
+        margin-right: 0.5em;
+    }
+    .contact{
+        align-items: center;
+    }
 }
+
