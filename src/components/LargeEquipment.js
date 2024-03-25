@@ -11,6 +11,9 @@ const LargeEquipment = () => {
     return (
         <div className="background">
             <Header/>
+            <div className="text-container">
+                <ConForm/>
+            </div>
             <div className="dj-grid">
                 <div className="text-container-grid">
                     <div className="slogan">Esine 1</div>
@@ -86,7 +89,6 @@ const LargeEquipment = () => {
                 </div>
             </div>
             <div className="text-container">
-                    <ConForm/>
                 </div>
             <Footer/>
         </div>

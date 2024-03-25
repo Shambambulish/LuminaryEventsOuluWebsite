@@ -66,7 +66,7 @@ function ConForm(){
                         <textarea  className= "field" placeHolder="Mitä asiasi koskee..." name="msg" id="msg" value={msg} onChange={(e) => setMsg(e.target.value)} rows="10"/>
                 </td>
                 <td>
-                    <input type="button"  className= "nappi" name="submit" id="submit" value=">" onClick={handleSubmit}/>
+                    <input type="button"  className= "nappi" name="submit" id="submit" value="Lähetä" onClick={handleSubmit}/>
                 </td>
             </form>
         </div>
