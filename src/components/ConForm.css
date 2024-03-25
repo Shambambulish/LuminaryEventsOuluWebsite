@@ -4,6 +4,8 @@
     font-size:20px;
     position: relative;
     text-align:center;
+    margin-bottom: 2em;
+    transition: transform 0.5s ease-in-out;
 }
 
 
@@ -56,14 +58,15 @@
     font-size:20px;
     position: relative;
     text-align:center;
+    margin-bottom: 4em;
   }
-
 
   .nappi {
     position: absolute;
     right: 40%;
     bottom: -15%;
-    margin-bottom: 2px;
+    margin-bottom: -15px;
+    
   }
   .nappi2 {
     background-color: #28282e; /* Green */
@@ -91,5 +94,22 @@
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .contact-form {
+    transform:scale(0.9, 1.0);
+  }
+  .nappi{
+    margin-left: 2em;
+}
+}
+@media only screen and (max-width: 380px) {
+  .contact-form {
+    margin-right: 0.5em;
+    transform:scale(0.8, 0.9);
+  }
+  .nappi{
+    margin-left: 2em;
   }
 }
