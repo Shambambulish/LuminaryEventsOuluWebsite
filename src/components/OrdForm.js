@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from 'axios';
-import "./OrdForm.css";
+import "./ConForm.css";
 import PhoneInput from "react-phone-number-input/input";
 
 
@@ -81,7 +81,7 @@ function OrdForm(){
                     </td>
                 </tr>
                 <tr>
-                    <input type="button"  className= "nappi" name="submit" id="submit" value=">" onClick={handleSubmit}/>
+                    <input type="button"  className= "nappi2" name="submit" id="submit" value="Lähetä" onClick={handleSubmit}/>
                 </tr>
                 
             </form>

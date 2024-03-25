@@ -20,14 +20,30 @@
   position:relative;
   bottom: -160px;
 }
+.nappi2 {
+  background-color: #28282e; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 10px;
+  position:relative;
+}
 
 .nappi:hover {
-    background-color: #110f16; /* Green */
-    color: white;
-  }
+  background-color: #110f16; /* Green */
+  color: white;
+}
+.nappi2:hover {
+  background-color: #110f16; /* Green */
+  color: white;
+}
 
 .field {
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
 }
