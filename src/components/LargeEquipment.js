@@ -85,7 +85,9 @@ const LargeEquipment = () => {
                     <img src={PlaceIcon} alt="dj" className="dj"/>
                 </div>
             </div>
-            <ConForm/>
+            <div className="text-container">
+                    <ConForm/>
+                </div>
             <Footer/>
         </div>
     );
