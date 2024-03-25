@@ -19,6 +19,7 @@
   border-radius: 10px;
   position:relative;
   bottom: -160px;
+  margin-left: 10px;
 }
 .nappi2 {
   background-color: #28282e; /* Green */
@@ -46,4 +47,49 @@
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
+}
+
+@media only screen and (max-width: 535px) {
+  .contact-form {
+    display: inline-block;
+    color: white;
+    font-size:20px;
+    position: relative;
+    text-align:center;
+  }
+
+
+  .nappi {
+    position: absolute;
+    right: 40%;
+    bottom: -15%;
+    margin-bottom: 2px;
+  }
+  .nappi2 {
+    background-color: #28282e; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 10px;
+    position:relative;
+  }
+
+  .nappi:hover {
+    background-color: #110f16; /* Green */
+    color: white;
+  }
+  .nappi2:hover {
+    background-color: #110f16; /* Green */
+    color: white;
+  }
+
+  .field {
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+  }
 }
