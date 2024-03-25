@@ -60,19 +60,10 @@
 
 
   .nappi {
-    background-color: #28282e; /* Green */
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    border-radius: 10px;
     position: absolute;
     right: 40%;
     bottom: -15%;
-    margin-left: 10px;
+    margin-bottom: 2px;
   }
   .nappi2 {
     background-color: #28282e; /* Green */

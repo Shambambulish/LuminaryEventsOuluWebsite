@@ -11,6 +11,7 @@ const LargeEquipment = () => {
     return (
         <div className="background">
             <Header/>
+            <br/>
             <div className="text-container">
                 <ConForm/>
             </div>
@@ -89,7 +90,7 @@ const LargeEquipment = () => {
                 </div>
             </div>
             <div className="text-container">
-                </div>
+            </div>
             <Footer/>
         </div>
     );
