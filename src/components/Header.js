@@ -89,7 +89,7 @@ function Header() {
         </Box>
         </Link>
 
-          <Box sx={{display: { xs: 'flex', md: 'none',}, mr: -8}}>
+          <Box sx={{display: { xs: 'flex', md: 'none',}, mr: -6}}>
             
             <IconButton
               size="small"
@@ -97,6 +97,12 @@ function Header() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
+              style={{
+                transition: 'transform 0.3s',
+                '&:hover': {
+                    transform: 'scale(1.2)',
+                },
+            }}
             >
               <MenuIcon />
             </IconButton>
@@ -134,7 +140,7 @@ function Header() {
             sx={{
               display: { xs: 'flex', md: 'none' },
                 height: 80,
-                width: 246,
+                width: '50%',
                 margin: 'auto',
                 cursor: 'pointer',
                 position: 'relative',
@@ -147,6 +153,7 @@ function Header() {
                     height: '4px',
                     backgroundImage: `linear-gradient(to right, transparent, #FF93FF, transparent)`,
                   },
+
               }}>
                     <Box
                         component="img"
