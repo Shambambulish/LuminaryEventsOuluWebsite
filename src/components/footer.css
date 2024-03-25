@@ -2,6 +2,7 @@
 
 .topspace{
     margin-top: 10em;
+    transition: margin-top 0.5s ease-in-out;
 }
 .footer {
     display: flex;
@@ -17,6 +18,7 @@
     color: #F2F3F5;
     font-size:20px;
     box-sizing: border-box;
+    transition: transform 0.5s ease-in-out;
 }
 
 .logo {
@@ -24,6 +26,7 @@
     margin-right: 1em;
     width: 4em;
     height: 4em;
+    transition: transform 0.5s ease-in-out;
 }
 
 .footer p {
@@ -31,6 +34,7 @@
     margin-left: 0.1em; 
     white-space: nowrap;
     align-items: center;
+    transition: transform 0.5s ease-in-out;
 }
 
 .grammy{
@@ -50,6 +54,7 @@
     height: 4.5em;
     margin-right: 2.5em;
     margin-left: 2.5em;
+    transition: opacity 0.5s ease-in-out;
 }
 .rightedge{
     display: flex;
@@ -57,6 +62,8 @@
     align-items: center;
     width: 100%;
     margin-right: 0.5em;
+    transition: transform 0.5s ease-in-out;
+    margin-left: 1em;
 }
 .location{
     width: 4em;
@@ -84,6 +91,7 @@
 }
 
 .leftedge{
+    transition: transform 0.5s ease-in-out;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -95,10 +103,12 @@
 
 @media only screen and (max-width: 830px) {
 
-
+    .footer{
+        transform:scale(1, 1);
+    }
     .footer p{
-        scale: 0.8;
         margin-left: -2em;
+        transform:scale(0.8, 0.8);
     }
     .grammy{
         margin-left: -0.1em;
@@ -108,15 +118,15 @@
     }
     .leftedge{
         width: 5%;
-        scale: 0.8;
+        transform:scale(0.8, 0.8);
         justify-content: start;
     }
     .rightedge{
         margin-right: -2em;
-        scale: 0.8;
+        transform:scale(0.8, 0.8);
     }
     .logo{
-        scale: 1;
+        transform:scale(1, 1);
     }
     .contact{
         align-items: flex-end;
@@ -127,7 +137,7 @@
         margin-right: 0.2em;
     }
     .line{
-        display: none;
+        opacity: 0;
     }
 }
 
@@ -140,20 +150,25 @@
         min-width: 300px;
         flex-direction: column;
     }
-    .footer p{
-        justify-content: start;
+    .needtomove{
+        margin-left: 2em;
     }
     .grammy{
         display: flex;
-        flex-direction: column;
-        justify-content: start;
+        justify-content: center;
+        margin-left: -2.5em;
     }
     .leftedge{
         justify-content: center;
     }
     .rightedge{
         justify-content: center;
-        margin-left: -2.4em;
+        margin-left: -3em;
+        margin-top: -0.5em;
+    }
+    .rightedge p{
+        justify-content: center;
+
     }
     .line{
         display: none;
