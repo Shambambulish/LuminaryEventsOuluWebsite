@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from 'axios';
 import "./ConForm.css";
 import PhoneInput from "react-phone-number-input/input";
+import SendIcon from '@mui/icons-material/Send';
 
 
 function ConForm(){
@@ -46,28 +47,24 @@ function ConForm(){
     return(
         <div className="conformbg">
             <form className="contact-form">
-                <h2>Ota yhteyttä!</h2>
-                <td>
-                    <tr>
-                        <label htmlFor="name">Nimi</label><br/>
-                        <input className= "field" type="text" placeHolder="Etunimi sukunimi..." name="name" id="name" value={name} onChange={(e) =>setName(e.target.value)}/>
-                    </tr>
-                    <tr>
-                        <label htmlFor="email">Sähköposti</label><br/>
-                        <input className= "field" type="email" placeHolder="esim. gmail..." name="email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)} />
-                    </tr>
-                    <tr>
-                        <label htmlFor="tel">Puhelinnumero</label><br/>
-                        <PhoneInput className= "field" country="FI" placeHolder="+358..."  name="tel" id="tel" value={tel} onChange={setTel} />
-                    </tr>
-                </td>
-                <td>
-                        <label htmlFor="msg">Viesti</label><br/>
-                        <textarea  className= "field" placeHolder="Mitä asiasi koskee..." name="msg" id="msg" value={msg} onChange={(e) => setMsg(e.target.value)} rows="10"/>
-                </td>
-                <td>
-                    <input type="button"  className= "nappi" name="submit" id="submit" value="Lähetä" onClick={handleSubmit}/>
-                </td>
+                        <div className="textbox">
+                        <h2 className="head">Ota yhteyttä!</h2>
+                                <label htmlFor="name">Nimi</label><br/>
+                                <input className= "textfield" type="text" placeholder="Etunimi Sukunimi" name="name" id="name" value={name} onChange={(e) =>setName(e.target.value)}/>
+                                <label htmlFor="email">Sähköposti</label><br/>
+                                <input className= "textfield" type="email" placeholder="Matti.Meikalainen@gmail.com" name="email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)} />
+                                <label htmlFor="tel">Puhelinnumero</label><br/>
+                                <PhoneInput className= "textfield" country="FI" placeholder="+358..."  name="tel" id="tel" value={tel} onChange={setTel} />
+                            </div>    
+                            <div className="messagebox">
+                                <label htmlFor="msg">Viesti</label><br/>
+                                <textarea  className= "messagefield" placeholder="Mitä asiasi koskee..." name="msg" id="msg" value={msg} onChange={(e) => setMsg(e.target.value)} rows="11"/>
+                            </div>
+                            <div className="buttonbox">
+                                <button type="submit" className="nappi" name="submit" id="submit" onClick={handleSubmit}>
+                                <SendIcon sx={{ color: '#F2F3F5', fontSize: 35}} />
+                                </button>
+                            </div>
             </form>
         </div>
     )
