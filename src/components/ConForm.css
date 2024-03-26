@@ -1,27 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+.conformbg{
+  overflow: hidden;
+}
 .contact-form {
-    display: inline-block;
+    transform:scale(1, 1);
+    font-family: Quicksand, sans-serif !important;
+    display: flex;
+    justify-content:center;
     color: white;
-    font-size:20px;
+    font-size:1.1em;
     position: relative;
     text-align:center;
     margin-bottom: 2em;
     transition: transform 0.5s ease-in-out;
 }
-
+.head{
+  display: flex;
+  margin-left: 0.5em;
+  white-space: nowrap;
+}
+.textbox{
+  margin-left: 2.5em;
+  margin-right: 4em;
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+.messagebox{
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.5em;
+}
+.buttonbox{
+  display: flex;
+  margin-top: 17.6em;
+  margin-left: 3em;
+  margin-right: 2em;
+}
 
 .nappi {
-  background-color: #28282e; /* Green */
+  transition: transform 0.5s ease-in-out;
+  transition: scale 0.5s ease;
+  background-color: #201C24;
   border: none;
   color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  border-radius: 10px;
-  position:relative;
-  bottom: -160px;
-  margin-left: 10px;
+  padding-top: 2em;
+  padding-right: 2em;
+  padding-left: 2em;
+  display: flex;
+  border-radius: 20px;
 }
 .nappi2 {
   background-color: #28282e; /* Green */
@@ -31,12 +60,14 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 20px;
+  font-size: 10px;
   border-radius: 10px;
   position:relative;
 }
 
 .nappi:hover {
+  transition: 0.5s ease;
+  transform:scale(1.1, 1.1);
   background-color: #110f16; /* Green */
   color: white;
 }
@@ -44,72 +75,111 @@
   background-color: #110f16; /* Green */
   color: white;
 }
-
-.field {
-  border-radius: 5px;
-  padding: 5px;
-  margin: 5px;
+.messagefield{
+  height: fit-content;
+  border-radius: 8px;
+  display: flex;
+  margin: 0.5em;
+  margin-left: 2em;
+  font-family: Quicksand, sans-serif !important;
+  border-radius: 8px;
+  padding: 0.5em;
+  font-size: 1em;
+}
+.textfield {
+  width: 75%;
+  font-family: Quicksand, sans-serif !important;
+  border-radius: 8px;
+  padding: 0.9em;
+  padding-right: 5em;
+  margin: 0.5em;
+  font-size: 1em;
 }
 
-@media only screen and (max-width: 535px) {
-  .contact-form {
-    display: inline-block;
-    color: white;
-    font-size:20px;
-    position: relative;
-    text-align:center;
-    margin-bottom: 4em;
-  }
 
+@media only screen and (max-width: 830px) {
+  .contact-form {
+    transition: 0.5s ease; 
+    scale: 0.8;
+  }
+  .messagefield{
+    height: fit-content;
+    border-radius: 8px;
+    display: flex;
+    margin: 0.5em;
+    margin-left: 1.5em;
+  }
   .nappi {
-    position: absolute;
-    right: 40%;
-    bottom: -15%;
-    margin-bottom: -15px;
-    
+    margin-right: 1em;
+    margin-left: 1em;
   }
-  .nappi2 {
-    background-color: #28282e; /* Green */
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    border-radius: 10px;
-    position:relative;
+  .textbox{
+    margin-left: 2.5em;
+    margin-right: 2em;
+    margin-top: 0.5em;
   }
+  .messagebox{
+    width: 75%;
+    margin-top: 4.5em;
+  }
+  .messagefield{
+    width: 100%;
+    min-width: 4.5em;
+  }
+  .textfield {
+    width: 50%;
+  }
+  
+}
 
-  .nappi:hover {
-    background-color: #110f16; /* Green */
-    color: white;
-  }
-  .nappi2:hover {
-    background-color: #110f16; /* Green */
-    color: white;
-  }
 
-  .field {
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
+
+@media only screen and (max-width: 510px) {
+  .head{
+    margin-top: 2em;
+    margin-left: 0;
+    margin-bottom: 1em;
   }
-}
-@media only screen and (max-width: 400px) {
   .contact-form {
-    transform:scale(0.9, 1.0);
+    transition: 0.5s ease; 
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -5em;
   }
-  .nappi{
-    margin-left: 2em;
-}
-}
-@media only screen and (max-width: 380px) {
-  .contact-form {
-    margin-right: 0.5em;
-    transform:scale(0.8, 0.9);
+  .messagefield{
+    justify-content: center;
+    border-radius: 8px;
+    display: flex;
+    margin: 0.5em;
+    margin-left: 1.5em;
   }
-  .nappi{
-    margin-left: 2em;
+  .nappi {
+    padding-bottom: 2em;
+    margin-right: 0em;
+    margin-left: 0em;
+    margin-top: 2em;
+  }
+  .textbox{
+    align-items: center;
+    margin-left: 2.5em;
+    margin-right: 2em;
+  }
+  .messagebox{
+    align-items: center;
+    margin-top: 1em;
+    margin-left: 2.4em;
+  }
+  .buttonbox{
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: -4em;
+  }
+  .messagefield{
+    width: 100%;
+    height: 6em;
+  }
+  .textfield {
+    width: 75%;
   }
 }
