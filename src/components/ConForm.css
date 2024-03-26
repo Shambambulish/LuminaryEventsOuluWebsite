@@ -22,7 +22,7 @@
   white-space: nowrap;
 }
 .textbox{
-  margin-left: 2.5em;
+  margin-left: -2em;
   margin-right: 4em;
   margin-top: 0.5em;
   display: flex;
@@ -76,7 +76,7 @@
   color: white;
 }
 .messagefield{
-  height: fit-content;
+  height: 13.5em;
   border-radius: 8px;
   display: flex;
   margin: 0.5em;
@@ -103,31 +103,33 @@
     scale: 0.8;
   }
   .messagefield{
-    height: fit-content;
+    height: 13.5em;
     border-radius: 8px;
     display: flex;
     margin: 0.5em;
-    margin-left: 1.5em;
+    margin-left: 1em;
+    min-width: 3.5em;
   }
   .nappi {
     margin-right: 0.25em;
     margin-left: 0.25em;
   }
   .textbox{
-    margin-left: 2.5em;
+    margin-left: -2em;
     margin-right: 2em;
     margin-top: 0.5em;
   }
   .messagebox{
-    width: 75%;
+    width: 50%;
     margin-top: 4.5em;
-  }
-  .messagefield{
-    width: 100%;
-    min-width: 4.5em;
   }
   .textfield {
     width: 50%;
+  }
+  .buttonbox{
+    margin-left: 0.5em;
+    margin-right: 3em;
+  
   }
   
 }
@@ -146,13 +148,7 @@
     justify-content: center;
     margin-top: -5em;
   }
-  .messagefield{
-    justify-content: center;
-    border-radius: 8px;
-    display: flex;
-    margin: 0.5em;
-    margin-left: 1.5em;
-  }
+
   .nappi {
     padding-bottom: 2em;
     margin-right: 0em;
@@ -167,21 +163,26 @@
     margin-right: 2em;
   }
   .messagebox{
+    display: flex;
     align-items: center;
-    margin-top: 1em;
-    margin-left: 2.4em;
+    align-self: center;
+    margin-top: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
   }
+
   .buttonbox{
     align-items: center;
     justify-content: center;
     margin: 0;
     margin-bottom: -4em;
   }
-  .messagefield{
-    width: 100%;
-    height: 6em;
-  }
   .textfield {
     width: 75%;
+  }
+  .messagefield{
+    width: 166%;
+    height: 100%;
+    margin-left: 0.5;
   }
 }
