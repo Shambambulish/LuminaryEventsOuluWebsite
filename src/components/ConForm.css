@@ -76,7 +76,7 @@
   color: white;
 }
 .messagefield{
-  height: 13.5em;
+  height: 100%;
   border-radius: 8px;
   display: flex;
   margin: 0.5em;
@@ -103,7 +103,7 @@
     scale: 0.8;
   }
   .messagefield{
-    height: 13.5em;
+    height: 100%;
     border-radius: 8px;
     display: flex;
     margin: 0.5em;
