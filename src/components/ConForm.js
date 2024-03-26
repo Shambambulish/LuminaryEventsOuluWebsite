@@ -58,7 +58,7 @@ function ConForm(){
                             </div>    
                             <div className="messagebox">
                                 <label htmlFor="msg">Viesti</label><br/>
-                                <textarea  className= "messagefield" placeholder="Mitä asiasi koskee..." name="msg" id="msg" value={msg} onChange={(e) => setMsg(e.target.value)} rows="11"/>
+                                <textarea  className= "messagefield" placeholder="Mitä asiasi koskee..." name="msg" id="msg" value={msg} onChange={(e) => setMsg(e.target.value)} rows="14"/>
                             </div>
                             <div className="buttonbox">
                                 <button type="submit" className="nappi" name="submit" id="submit" onClick={handleSubmit}>

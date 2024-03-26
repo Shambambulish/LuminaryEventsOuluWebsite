@@ -46,11 +46,11 @@
   background-color: #201C24;
   border: none;
   color: white;
-  padding-top: 2em;
-  padding-right: 2em;
-  padding-left: 2em;
+  padding: 2em;
   display: flex;
   border-radius: 20px;
+  bottom: 33.3%;
+  position: fixed;
 }
 .nappi2 {
   background-color: #28282e; /* Green */
@@ -97,7 +97,7 @@
 }
 
 
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 1020px) {
   .contact-form {
     transition: 0.5s ease; 
     scale: 0.8;
@@ -110,8 +110,8 @@
     margin-left: 1.5em;
   }
   .nappi {
-    margin-right: 1em;
-    margin-left: 1em;
+    margin-right: 0.25em;
+    margin-left: 0.25em;
   }
   .textbox{
     margin-left: 2.5em;
@@ -158,6 +158,8 @@
     margin-right: 0em;
     margin-left: 0em;
     margin-top: 2em;
+    bottom: 0;
+    position: relative;
   }
   .textbox{
     align-items: center;
