@@ -1,9 +1,8 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import logo from "./img/logo.png";
 import React from "react";
 import dj from "./img/luminarydj.jpg"
-import "./Frontpage.css";
+import "./DjServices.css";
 
 const DjServices = () => {
 
@@ -42,10 +41,6 @@ const DjServices = () => {
                         Integer ornare tellus magna, non consequat arcu sagittis feugiat. Nam vitae luctus mi. Nulla eu sem congue, consequat velit et, venenatis odio. Aenean maximus eu velit ut auctor. Etiam vulputate porttitor ex, ac venenatis enim cursus vitae. Maecenas eu cursus nulla, nec finibus magna. Pellentesque massa nunc, condimentum vel magna non, cursus rutrum ex. Aliquam congue enim vitae nisl efficitur pretium. Etiam ac feugiat diam, ut hendrerit dui. Donec commodo in turpis at dapibus. Mauris tincidunt enim id tristique mollis. Pellentesque nec lorem ac justo commodo tempus.
 
                         Curabitur porta ligula magna, faucibus venenatis nisi efficitur feugiat. Nulla vitae aliquet mauris. Mauris semper id metus id cursus. Duis ac convallis massa. Aenean cursus augue tortor, ut dignissim odio ullamcorper ac. Morbi non lectus volutpat, iaculis enim a, viverra magna. Etiam finibus sem dolor, dignissim tempus ipsum consequat id. Ut ipsum enim, lobortis eu ex a, efficitur malesuada dui. Mauris iaculis ipsum volutpat massa tristique, eget pulvinar est sagittis. Pellentesque rhoncus felis vel quam dictum, sit amet molestie orci mollis. Nunc mollis, turpis ac fringilla molestie, quam tortor tincidunt turpis, dictum facilisis libero orci a nunc. Pellentesque finibus elit sit amet sem lobortis facilisis. Nulla a faucibus leo.
-
-                        Quisque viverra a est vel imperdiet. Etiam a metus in enim accumsan venenatis nec at magna. Vestibulum sodales iaculis nunc, eget suscipit turpis egestas nec. Sed ullamcorper sagittis pharetra. Praesent eget tincidunt ex. Ut vitae erat vulputate, imperdiet lacus porttitor, tempor mi. Sed tempor urna sem. Sed quis imperdiet libero. Quisque vel massa quis lectus viverra sollicitudin a in nulla. Vestibulum sit amet tincidunt purus. Sed cursus maximus nibh in tristique. Ut euismod est et sapien pellentesque laoreet. Proin mattis, orci et ultricies malesuada, tellus risus bibendum elit, et aliquet mauris metus vel mauris. In hac habitasse platea dictumst.
-
-                        Mauris et velit sit amet sapien viverra congue quis vel justo. Suspendisse vel facilisis elit. Sed elit quam, venenatis ut turpis in, sollicitudin eleifend tortor. Cras nisl sem, egestas non purus sit amet, lacinia aliquet velit. Fusce in feugiat libero, quis mollis velit. Quisque maximus aliquam odio. Donec nibh nisl, eleifend egestas interdum sed, hendrerit malesuada justo. Sed justo elit, pretium non aliquam sit amet, iaculis vitae nibh. Cras vel arcu vehicula, sollicitudin mauris nec, bibendum nisi. Morbi nec lorem quis purus elementum eleifend ac sit amet neque. Proin vitae placerat est. Fusce id sagittis libero.
                     </div>
                 </div>
                 <div className="image-container">
