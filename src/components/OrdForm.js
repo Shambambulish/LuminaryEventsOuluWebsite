@@ -1,7 +1,8 @@
 import { useState } from "react";
 import axios from 'axios';
-import "./ConForm.css";
+import "./OrdForm.css";
 import PhoneInput from "react-phone-number-input/input";
+import SendIcon from '@mui/icons-material/Send';
 
 
 function OrdForm(){
@@ -44,46 +45,27 @@ function OrdForm(){
     }
 
     return(
-        <div className="conformbg">
-            <form className="contact-form">
-                <tr>
-                    <td>
+        <div className="ordconformbg">
+            <form className="order-form">
+                <div className="ordtextbox">
                         <label htmlFor="name">Nimi</label>
-                    </td>
-                    <input className= "field" type="text" placeHolder="Etunimi sukunimi..." name="name" id="name" value={name} onChange={(e) =>setName(e.target.value)}/>
-                </tr>
-                <tr>
-                    <td>
+                    <input className= "ordtextfield" type="text" placeHolder="Etunimi sukunimi..." name="name" id="name" value={name} onChange={(e) =>setName(e.target.value)}/>
                         <label htmlFor="email">Sähköposti</label>
-                    </td>
-                    <input className= "field" type="email" placeHolder="esim. gmail..." name="email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)} />
-                </tr>
-                <tr>
-                    <td>
+                    <input className= "ordtextfield" type="email" placeHolder="esim. gmail..." name="email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)} />
                         <label htmlFor="tel">Puhelinnumero</label>
-                    </td>
-                    <PhoneInput className= "field" country="FI" placeHolder="+358..."  name="tel" id="tel" value={tel} onChange={setTel} />
-                </tr>
-                <tr>
-                    <td>
+                        <PhoneInput className= "ordtextfield" country="FI" placeHolder="+358..."  name="tel" id="tel" value={tel} onChange={setTel} />
+                    </div> 
+                    <div className="ordrightbox">
                         <label htmlFor="content">Lista vuokrattavista tavaroista:</label>
-                    </td>
-                    <td>
                         <label htmlFor="content" name="content" id="content"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
                         <label htmlFor="price">Hinta:</label>
-                    </td>
-                    <td>
                         <label htmlFor="price" name="price" id="price"/>
-                    </td>
-                </tr>
-                <tr>
-                    <input type="button"  className= "nappi2" name="submit" id="submit" value="Lähetä" onClick={handleSubmit}/>
-                </tr>
-                
+                        </div>
+                        <div className="ordbuttonbox">
+                        <button type="submit" className="ordnappi" name="submit" id="submit" onClick={handleSubmit}>
+                        <SendIcon sx={{ color: '#F2F3F5', fontSize: 35}} />
+                        </button>
+                        </div>
             </form>
         </div>
     )
