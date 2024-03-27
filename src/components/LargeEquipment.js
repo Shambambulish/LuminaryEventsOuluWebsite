@@ -3,7 +3,6 @@ import Footer from "./Footer";
 import "./Frontpage.css";
 import ConForm from "./ConForm";
 import React from "react";
-import PlaceIcon from '@mui/icons-material/Place';
 
 
 const LargeEquipment = () => {
@@ -36,7 +35,7 @@ const LargeEquipment = () => {
                     <div className="textblock">saatavilla x kappaletta</div>
                 </div>
                 <div className="image-container">
-                    <img src={PlaceIcon} alt="dj" className="dj"/>
+                    <img src="https://placehold.co/1000x1000" alt="dj" className="dj"/>
                 </div>
             </div>
             <br/>
@@ -61,7 +60,7 @@ const LargeEquipment = () => {
                     <div className="textblock">saatavilla x kappaletta</div>
                 </div>
                 <div className="image-container">
-                    <img src={PlaceIcon} alt="dj" className="dj"/>
+                    <img src="https://placehold.co/1000x1000" alt="dj" className="dj"/>
                 </div>
             </div>
             <br/>
@@ -86,7 +85,7 @@ const LargeEquipment = () => {
                     <div className="textblock">saatavilla x kappaletta</div>
                 </div>
                 <div className="image-container">
-                    <img src={PlaceIcon} alt="dj" className="dj"/>
+                    <img src="https://placehold.co/1000x1000" alt="dj" className="dj"/>
                 </div>
             </div>
             <div className="text-container">
