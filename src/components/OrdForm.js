@@ -49,11 +49,11 @@ function OrdForm(){
             <form className="order-form">
                 <div className="ordtextbox">
                         <label htmlFor="name">Nimi</label>
-                    <input className= "ordtextfield" type="text" placeHolder="Etunimi sukunimi..." name="name" id="name" value={name} onChange={(e) =>setName(e.target.value)}/>
+                    <input className= "ordtextfield" type="text" placeholder="Etunimi sukunimi..." name="name" id="name" value={name} onChange={(e) =>setName(e.target.value)}/>
                         <label htmlFor="email">Sähköposti</label>
-                    <input className= "ordtextfield" type="email" placeHolder="esim. gmail..." name="email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)} />
+                    <input className= "ordtextfield" type="email" placeholder="esim. gmail..." name="email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)} />
                         <label htmlFor="tel">Puhelinnumero</label>
-                        <PhoneInput className= "ordtextfield" country="FI" placeHolder="+358..."  name="tel" id="tel" value={tel} onChange={setTel} />
+                        <PhoneInput className= "ordtextfield" country="FI" placeholder="+358..."  name="tel" id="tel" value={tel} onChange={setTel} />
                     </div> 
                     <div className="ordrightbox">
                         <label htmlFor="content">Lista vuokrattavista tavaroista:</label>

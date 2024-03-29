@@ -4,6 +4,7 @@ import Frontpage from './components/Frontpage.js';
 import LargeEquipment from './components/LargeEquipment.js';
 import SmallEquipment from './components/SmallEquipment.js';
 import DjServices from './components/DjServices.js';
+import Contactinfo from './components/Contactinfo.js';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
             <Route path="/Pientavarat" element={<SmallEquipment/>} />
             <Route path="/Suurtavarat" element={<LargeEquipment/>} />
             <Route path="/DJ-Palvelut" element={<DjServices/>} />
+            <Route path="/Yhteystiedot" element={<Contactinfo/>} />
           </Routes>
         </Router>
   );
