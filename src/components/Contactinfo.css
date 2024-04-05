@@ -5,11 +5,13 @@
     display: flex;
     flex-direction: column;
     white-space: nowrap;
+    font-weight: 450;
+    font-size: 1.2em;
 }
 .contactslogan{
     font-family: Quicksand, sans-serif;
     color: #F2F3F5;
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: 600;
     margin-top: 2%;
     margin-left: 4%;
@@ -53,12 +55,8 @@
 
 @media only screen and (max-width: 830px) {
     .contacttext-container{
-        font-family: Quicksand, sans-serif;
         margin-top: 5%;
         margin-bottom: 2%;
-        color: #F2F3F5;
-        background-color: rgba(32, 28, 36, 0.5);
-        border-radius: 20px;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -69,8 +67,6 @@
         justify-content: center;
         font-family: Quicksand, sans-serif;
         color: #F2F3F5;
-        font-size: 1.5em;
-        font-weight: 600;
         margin-top: 2%;
         margin-left: 0;
     }
@@ -97,12 +93,9 @@
 
 @media only screen and (max-width: 560px) {
     .contacttext-container{
-        font-family: Quicksand, sans-serif;
         margin-top: -10%;
         margin-bottom: 2%;
         color: #F2F3F5;
-        background-color: rgba(32, 28, 36, 0.5);
-        border-radius: 20px;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -117,18 +110,12 @@
         display: flex;
         justify-content: center;
         transform: scale(0.8);
-
-    
     }
 }
 @media only screen and (max-width: 400px) {
     .contacttext-container{
-        font-family: Quicksand, sans-serif;
         margin-top: -15%;
         margin-bottom: 2%;
-        color: #F2F3F5;
-        background-color: rgba(32, 28, 36, 0.5);
-        border-radius: 20px;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -143,7 +130,5 @@
         display: flex;
         justify-content: center;
         transform: scale(0.7);
-
-    
     }
 }
