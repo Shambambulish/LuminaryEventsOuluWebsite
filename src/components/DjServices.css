@@ -82,11 +82,19 @@
 .image-container img {
     border-radius: 35px;
   }
+  .image-container {
+    display: flex;
+    position: relative;
+    scale: 0.8;
+  }
 
 @media only screen and (max-width: 1300px){
     .dj-grid{
         display: block;
     }
+    .image-container {
+        justify-content: center;
+      }
 }
 
 @media only screen and (max-width: 700px){
