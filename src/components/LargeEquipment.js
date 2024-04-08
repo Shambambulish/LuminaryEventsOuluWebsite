@@ -16,76 +16,70 @@ const LargeEquipment = () => {
             </div>
             <div className="dj-grid">
                 <div className="text-container-grid">
-                    <div className="slogan">Esine 1</div>
+                    <div className="slogan">Esimerkkipaketti pienille tapahtumille:</div>
                     <br/>
                     <div className="textblock">Ipsum Lorem
                     </div>
                     <br/>
-                    <div className="subquestion">Lisätietoja esineestä</div>
+                    <div className="subquestion">Paketin mukana sisältyvät laitteet</div>
                     <br/>
-                    <div className="textblock">lisätietoja: ei ole
+                    <div className="textblock">vastaus tähän
 
                     </div>
                     <br/>
-                    <div className="subquestion">Mitä lisälaitteita/kaapeleita/ym tämä tarvitsee?
+                    <div className="subquestion">Mitä lisälaitteita/kaapeleita/ym tämä paketti sisältää?
                     </div>
                     <br/>
-                    <div className="textblock">lisätietoja: ei ole</div>
-                    <br/>
-                    <div className="textblock">saatavilla x kappaletta</div>
+                    <div className="textblock">vastaus tähän</div>
                 </div>
                 <div className="image-container">
-                    <img src="https://placehold.co/1000x1000" alt="dj" className="dj"/>
+                    <img src="https://placehold.co/500x500" alt="dj" className="LargeEquipmentImage"/>
                 </div>
             </div>
             <br/>
             <div className="dj-grid">
                 <div className="text-container-grid">
-                    <div className="slogan">Esine 2</div>
+                    <div className="slogan">Esimerkkipaketti keskikokoisille tapahtumille:</div>
                     <br/>
-                    <div className="textblock">Lorem ipsum
+                    <div className="textblock">Ipsum Lorem
                     </div>
                     <br/>
-                    <div className="subquestion">Lisätietoja esineestä</div>
+                    <div className="subquestion">Paketin mukana sisältyvät laitteet</div>
                     <br/>
-                    <div className="textblock">lisätietoja: ei ole
+                    <div className="textblock">vastaus tähän
 
                     </div>
                     <br/>
-                    <div className="subquestion">Mitä lisälaitteita/kaapeleita/ym tämä tarvitsee?
+                    <div className="subquestion">Mitä lisälaitteita/kaapeleita/ym tämä paketti sisältää?
                     </div>
                     <br/>
-                    <div className="textblock">lisätietoja: ei ole</div>
-                    <br/>
-                    <div className="textblock">saatavilla x kappaletta</div>
+                    <div className="textblock">vastaus tähän</div>
                 </div>
                 <div className="image-container">
-                    <img src="https://placehold.co/1000x1000" alt="dj" className="dj"/>
+                    <img src="https://placehold.co/500x500" alt="dj" className="LargeEquipmentImage"/>
                 </div>
             </div>
             <br/>
             <div className="dj-grid">
                 <div className="text-container-grid">
-                    <div className="slogan">Esine 3</div>
+                    <div className="slogan">Esimerkkipaketti suurille tapahtumille:</div>
                     <br/>
-                    <div className="textblock">musip meroL
+                    <div className="textblock">Ipsum Lorem
                     </div>
                     <br/>
-                    <div className="subquestion">Lisätietoja esineestä</div>
+                    <div className="subquestion">Paketin mukana sisältyvät laitteet</div>
                     <br/>
-                    <div className="textblock">lisätietoja: ei ole
+                    <div className="textblock">vastaus tähän
 
                     </div>
                     <br/>
-                    <div className="subquestion">Mitä lisälaitteita/kaapeleita/ym tämä tarvitsee?
+                    <div className="subquestion">Mitä lisälaitteita/kaapeleita/ym tämä paketti sisältää?
                     </div>
                     <br/>
-                    <div className="textblock">lisätietoja: ei ole</div>
-                    <br/>
-                    <div className="textblock">saatavilla x kappaletta</div>
+                    <div className="textblock">vastaus tähän</div>
                 </div>
                 <div className="image-container">
-                    <img src="https://placehold.co/1000x1000" alt="dj" className="dj"/>
+                    <img src="https://placehold.co/500x500" alt="dj" className="LargeEquipmentImage"/>
                 </div>
             </div>
             <div className="text-container">
