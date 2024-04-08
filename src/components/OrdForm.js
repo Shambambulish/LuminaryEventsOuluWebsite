@@ -58,7 +58,7 @@ function OrdForm(){
                     <input className= "ordtextfield" type="email" placeholder="esim. gmail..." name="email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)} />
                         <label htmlFor="tel">Puhelinnumero</label>
                         <PhoneInput className= "ordtextfield" country="FI" placeholder="+358..."  name="tel" id="tel" value={tel} onChange={setTel} />
-                        <label htmlFor="tel">Aloituspvm.</label>
+                        <label htmlFor="startdate">Aloituspvm.</label>
                         <input className= "ordtextfield" type="date"  name="startdate" id="startdate" value={startdate} onChange={(e) =>setStartdate(e.target.value)} />
                     </div> 
                     <div className="ordrightbox">
@@ -69,7 +69,7 @@ function OrdForm(){
                         <label htmlFor="price" name="price" id="price"/>
                         </div>
                         <div className="rightdate">
-                        <label htmlFor="tel">Lopetuspvm.</label>
+                        <label htmlFor="enddate">Lopetuspvm.</label>
                         <input className= "ordtextfield" type="date"  name="enddate" id="enddate" value={enddate} onChange={(e) =>setEnddate(e.target.value)} />
                         </div>
                         </div>
