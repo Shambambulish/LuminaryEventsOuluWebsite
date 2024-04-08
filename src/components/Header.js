@@ -17,13 +17,14 @@ import './Header.css';
 
 
 const pages = ['Pientavarat', 'Suurtavarat', 'DJ-Palvelut'];
+const contactinfo = ['Yhteystiedot'];
 const colors = ['#FF93FF', '#4CC6FF', '#FFC227'];
 
 const theme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
-      md: 1100
+      md: 1300
     },
   },
 });
@@ -89,7 +90,7 @@ function Header() {
         </Box>
         </Link>
 
-          <Box sx={{display: { xs: 'flex', md: 'none',}, mr: -6}}>
+          <Box sx={{display: { xs: 'flex', md: 'none',}, mr: -5}}>
             
             <IconButton
               size="small"
@@ -133,7 +134,16 @@ function Header() {
                       <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
               </Link>
+              
               ))}
+              <Link key={contactinfo} to={`/${contactinfo}`} style={{ textDecoration: 'none' }}>
+                  <MenuItem 
+                    onClick={handleCloseNavMenu} 
+                    color={colors[colors.length]}>
+                      <Typography textAlign="center">{contactinfo}</Typography>
+                  </MenuItem>
+              </Link>
+              
             </Menu>
           </Box>
           <Box
@@ -232,6 +242,43 @@ function Header() {
           </Link>
             ))}
           </Box>
+              <Box sx={{display: { xs: 'none', md: 'flex' },}}>
+              <Link 
+                key={contactinfo} 
+                to={`/${contactinfo}`} 
+                style={{
+                position: 'relative',
+                textDecoration: 'none',
+                overflow: 'hidden',
+                display: 'inline-block'
+              }}
+            >
+              <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ 
+                  my: 2, 
+                  mx: 7, 
+                  color: '#F2F3F5',
+                  display: 'block',
+                  position: 'relative',
+                  zIndex: 1,
+                  whiteSpace: 'nowrap',
+                  textTransform: 'uppercase',
+                  transition: 'font-weight 0.5s ease',
+                  fontFamily: 'Quicksand, sans-serif',
+                  fontWeight: 450,
+                  fontSize: '1.3em',
+                  marginRight: '2em',
+                  ':hover': {
+                  animation: 'forwards fadeIn 0.5s',
+                  fontWeight: 600,
+                  backgroundColor: 'transparent',
+                },
+              }}>
+                {contactinfo}
+              </Button>
+          </Link>
+              </Box>
         </Toolbar>
       </Container>
     </AppBar>

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.contacttextblock{
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    font-weight: 450;
+    font-size: 1.2em;
+}
+.contactslogan{
+    font-family: Quicksand, sans-serif;
+    color: #F2F3F5;
+    font-size: 1.7em;
+    font-weight: 600;
+    margin-top: 2%;
+    margin-left: 4%;
+}
+.contacttext-container{
+    font-family: Quicksand, sans-serif;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    color: #F2F3F5;
+    background-color: rgba(32, 28, 36, 0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.5s ease;
+
+}
+.contacttext-container-grid{
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    color: white;
+}
+
+.logobox{
+    display: flex;
+    align-items: end;
+    margin-right: 8%;
+}
+.contactlogo{
+    max-width: 450px;
+    max-height: 450px;
+    display: block;
+    position: relative;
+    margin: 8%;
+    transition: 0.5s ease;
+
+}
+
+@media only screen and (max-width: 830px) {
+    .contacttext-container{
+        margin-top: 5%;
+        margin-bottom: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        transform: scale(0.9);
+    }
+    .contactslogan{
+        justify-content: center;
+        font-family: Quicksand, sans-serif;
+        color: #F2F3F5;
+        margin-top: 2%;
+        margin-left: 0;
+    }
+    .contacttext-container-grid{
+        margin-top: 10%;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        margin-bottom: 2%;
+        color: white;
+    }
+    .contactlogo{
+        max-width: 450px;
+        max-height: 450px;
+        display: flex;
+        justify-content: center;
+        margin: 8%;
+        margin-left: 3%;
+    
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .contacttext-container{
+        margin-top: -10%;
+        margin-bottom: 2%;
+        color: #F2F3F5;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        scale: 0.8;
+    }
+    .contacttext-container-grid{
+        margin-top: 10%;
+        margin-bottom: -10%;
+    }
+    .contactlogo{
+        display: flex;
+        justify-content: center;
+        transform: scale(0.8);
+    }
+}
+@media only screen and (max-width: 400px) {
+    .contacttext-container{
+        margin-top: -15%;
+        margin-bottom: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        scale: 0.8;
+    }
+    .contacttext-container-grid{
+        margin-top: 10%;
+        margin-bottom: -10%;
+    }
+    .contactlogo{
+        display: flex;
+        justify-content: center;
+        transform: scale(0.7);
+    }
+}

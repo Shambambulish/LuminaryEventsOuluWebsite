@@ -2,8 +2,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import OrdForm from "./OrdForm";
 import "./Frontpage.css";
-import logo from "./img/logo.png";
-import logo2 from "./img/Logo2.png"
 
 const SmallEquipment = () => {
     //!!! banner grid not working quite as intended !!!
