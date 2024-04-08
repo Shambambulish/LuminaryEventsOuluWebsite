@@ -82,4 +82,18 @@
 .image-container img {
     border-radius: 35px;
   }
-  
+
+@media only screen and (max-width: 1300px){
+    .dj-grid{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .dj-grid{
+        display: block;
+    }
+    .image-container{
+        display: none;
+    }
+}
