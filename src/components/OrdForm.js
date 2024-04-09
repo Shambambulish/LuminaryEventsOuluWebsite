@@ -3,6 +3,9 @@ import axios from 'axios';
 import "./OrdForm.css";
 import PhoneInput from "react-phone-number-input/input";
 import SendIcon from '@mui/icons-material/Send';
+import AcceptTerms from "./tosaccept";
+import Alert from '@mui/material/Alert';
+
 
 
 function OrdForm(){
@@ -14,13 +17,35 @@ function OrdForm(){
     //const [Content, setContent] = useState('');
     //const [price, setPrice] = useState('');
 
+    const [showAcceptTerms, setShowAcceptTerms] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
+    const [alertMessage, setAlertMessage] = useState('');
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        setShowAcceptTerms(true);
+    };
+
+    const handleClose = () => {
+        setShowAcceptTerms(false);
+    };
+    
     const handleSubmit = () => {
         if(name.length === 0 || name.length > 35) {
-            alert("Syötä Nimi")
+            setAlertMessage('Syötä Nimi');
+            setShowAlert(true);
         }else if(email.length === 0 || email.length > 35 || email.length < 4) {
-            alert("Syötä hyväksyttävä sähköpostiosoite")
+            setAlertMessage('Syötä hyväksyttävä sähköpostiosoite');
+            setShowAlert(true);
         }else if(tel.length === 0 || tel.length > 13 || tel.length < 7) {
-            alert("Syötä hyväksyttävä puhelinnumero")
+            setAlertMessage('Syötä hyväksyttävä puhelinnumero');
+            setShowAlert(true);
+        }else if(startdate === "") {
+            setAlertMessage('Syötä aloituspäivämäärä');
+            setShowAlert(true);
+        }else if(enddate === "") {
+            setAlertMessage("Syötä lopetuspäivämäärä")
+            setShowAlert(true);
         } else{
             // Tähän pittää laittaa osote, lomake lähettää tiedot axioksella form data payloadissa. Sähköpostiin vaaditut tiedot kulkee siinä myös.
             const url ="API TAI KANTA TÄHÄ TÄNNE LÄHTEE DATA";
@@ -50,6 +75,7 @@ function OrdForm(){
 
     return(
         <div className="ordconformbg">
+            {showAlert && <Alert severity="error">{alertMessage}</Alert>}
             <form className="order-form">
                 <div className="ordtextbox">
                         <label htmlFor="name">Nimi</label>
@@ -74,10 +100,13 @@ function OrdForm(){
                         </div>
                         </div>
                         <div className="ordbuttonbox">
-                        <button type="submit" className="ordnappi" name="submit" id="submit" onClick={handleSubmit}>
+                        <button className="ordnappi" onClick={handleClick}>
                         <SendIcon sx={{ color: '#F2F3F5', fontSize: 35}} />
                         </button>
+                        {showAcceptTerms && <AcceptTerms handleClose={handleClose} handleSubmit={handleSubmit}/>}
                         </div>
+                        <div>
+        </div>
             </form>
         </div>
     )
