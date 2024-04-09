@@ -15,6 +15,10 @@ export default function AcceptTerms(props) {
     setOpen(false);
     props.handleClose();
   };
+  const handleAgree = () => {
+    props.handleSubmit();
+    handleClose();
+  };
 
 
   return (
@@ -172,9 +176,9 @@ export default function AcceptTerms(props) {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Disagree</Button>
-          <Button onClick={handleClose} autoFocus>
-            Agree
+          <Button onClick={handleClose}>Hylkää</Button>
+          <Button onClick={handleAgree} autoFocus>
+            Hyväksyn
           </Button>
         </DialogActions>
       </Dialog>

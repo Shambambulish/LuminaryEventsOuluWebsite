@@ -33,6 +33,10 @@ function OrdForm(){
             alert("Syötä hyväksyttävä sähköpostiosoite")
         }else if(tel.length === 0 || tel.length > 13 || tel.length < 7) {
             alert("Syötä hyväksyttävä puhelinnumero")
+        }else if(startdate === null) {
+            alert("Syötä aloituspäivämäärä")
+        }else if(enddate === null) {
+            alert("Syötä lopetuspäivämäärä")
         } else{
             // Tähän pittää laittaa osote, lomake lähettää tiedot axioksella form data payloadissa. Sähköpostiin vaaditut tiedot kulkee siinä myös.
             const url ="API TAI KANTA TÄHÄ TÄNNE LÄHTEE DATA";
@@ -89,7 +93,7 @@ function OrdForm(){
                         <button className="ordnappi" onClick={handleClick}>
                         <SendIcon sx={{ color: '#F2F3F5', fontSize: 35}} />
                         </button>
-                        {showAcceptTerms && <AcceptTerms handleClose={handleClose}/>}
+                        {showAcceptTerms && <AcceptTerms handleClose={handleClose} handleSubmit={handleSubmit}/>}
                         </div>
             </form>
         </div>
