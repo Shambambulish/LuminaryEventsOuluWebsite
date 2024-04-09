@@ -3,6 +3,7 @@ import axios from 'axios';
 import "./OrdForm.css";
 import PhoneInput from "react-phone-number-input/input";
 import SendIcon from '@mui/icons-material/Send';
+import AcceptTerms from "./tosaccept";
 
 
 function OrdForm(){
@@ -14,6 +15,17 @@ function OrdForm(){
     //const [Content, setContent] = useState('');
     //const [price, setPrice] = useState('');
 
+    const [showAcceptTerms, setShowAcceptTerms] = useState(false);
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        setShowAcceptTerms(true);
+    };
+
+    const handleClose = () => {
+        setShowAcceptTerms(false);
+    };
+    
     const handleSubmit = () => {
         if(name.length === 0 || name.length > 35) {
             alert("Syötä Nimi")
@@ -74,9 +86,10 @@ function OrdForm(){
                         </div>
                         </div>
                         <div className="ordbuttonbox">
-                        <button type="submit" className="ordnappi" name="submit" id="submit" onClick={handleSubmit}>
+                        <button className="ordnappi" onClick={handleClick}>
                         <SendIcon sx={{ color: '#F2F3F5', fontSize: 35}} />
                         </button>
+                        {showAcceptTerms && <AcceptTerms handleClose={handleClose}/>}
                         </div>
             </form>
         </div>
