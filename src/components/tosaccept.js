@@ -23,8 +23,9 @@ export default function AcceptTerms(props) {
 
   return (
     <React.Fragment>
-      <Dialog
+      <Dialog className="popup"
         open={open}
+        
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
