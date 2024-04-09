@@ -40,10 +40,10 @@ function OrdForm(){
         }else if(tel.length === 0 || tel.length > 13 || tel.length < 7) {
             setAlertMessage('Syötä hyväksyttävä puhelinnumero');
             setShowAlert(true);
-        }else if(startdate === null) {
+        }else if(startdate === "") {
             setAlertMessage('Syötä aloituspäivämäärä');
             setShowAlert(true);
-        }else if(enddate === null) {
+        }else if(enddate === "") {
             setAlertMessage("Syötä lopetuspäivämäärä")
             setShowAlert(true);
         } else{
@@ -75,7 +75,7 @@ function OrdForm(){
 
     return(
         <div className="ordconformbg">
-                        {showAlert && <Alert severity="error">{alertMessage}</Alert>}
+            {showAlert && <Alert severity="error">{alertMessage}</Alert>}
             <form className="order-form">
                 <div className="ordtextbox">
                         <label htmlFor="name">Nimi</label>
