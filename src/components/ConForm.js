@@ -32,7 +32,7 @@ function ConForm(){
             alert("Syötä aikahaarukka vuokralle")
         } else{
             // Tähän pittää laittaa osote, lomake lähettää tiedot axioksella form data payloadissa. Sähköpostiin vaaditut tiedot kulkee siinä myös.
-            const url ="http://localhost:3001/orders";
+            const url = process.env.API + "/devices";
 
             let fData = new FormData();
             fData.append("total_price", 1);
