@@ -3,10 +3,13 @@ import axios from 'axios';
 import "./ConForm.css";
 import PhoneInput from "react-phone-number-input/input";
 import SendIcon from '@mui/icons-material/Send';
+import AcceptTerms from "./tosaccept";
+import Alert from '@mui/material/Alert';
 import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { fi } from 'date-fns/locale/fi';
 registerLocale('fi', fi);
+
 
 
 
@@ -15,42 +18,52 @@ function ConForm(){
     const [email, setEmail] = useState("");
     const [tel, setTel] = useState("");
     const [msg, setMsg] = useState("");
-    const [rng, newRng] = useState([null, null]);
-    const [alPvm, loPvm] = rng;
+    const [dateRange, setDateRange] = useState([null, null]);
+    const [startDate, endDate] = (dateRange);
+    const [showAcceptTerms, setShowAcceptTerms] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
+    const [alertMessage, setAlertMessage] = useState('');
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        setShowAcceptTerms(true);
+    };
+
+    const handleClose = () => {
+        setShowAcceptTerms(false);
+    };
 
 
     const handleSubmit = () => {
         if(name.length === 0 || name.length > 35) {
-            alert("Syötä Nimi")
+            setAlertMessage("Syötä Nimi.");
+            setShowAlert(true);
         }else if(email.length === 0 || email.length > 35 || email.length < 4) {
-            alert("Syötä hyväksyttävä sähköpostiosoite")
+            setAlertMessage("Syötä hyväksyttävä sähköpostiosoite.");
+            setShowAlert(true);
         }else if(tel.length === 0 || tel.length > 13 || tel.length < 7) {
-            alert("Syötä hyväksyttävä puhelinnumero")
-        }else if(msg.length === 0 || msg.length > 300) {
-            alert("Syötä korkeintaan 300 merkkiä sisältävä viesti")
-        }else if(rng == [null,null]) {
-            alert("Syötä aikahaarukka vuokralle")
-        } else{
+            setAlertMessage("Syötä hyväksyttävä puhelinnumero.");
+            setShowAlert(true);
+        }else if(msg.length > 300) {
+            setAlertMessage("Viestin enimmäispituus on 300 merkkiä.");
+            setShowAlert(true);
+        }else if(dateRange == [null, null]){
+            setAlertMessage("Syötä aikajakso, jona kalustoa tarvitset.");
+            setShowAlert(true);
+        }else{
             // Tähän pittää laittaa osote, lomake lähettää tiedot axioksella form data payloadissa. Sähköpostiin vaaditut tiedot kulkee siinä myös.
             const url = process.env.API + "/devices";
 
-            let fData = new FormData();
-            fData.append("total_price", 1);
-            fData.append("order_start_date", alPvm);
-            fData.append("order_length_days", 1);
-            fData.append("order_end_date", loPvm);
-            fData.append("payment_due_date", loPvm);
-            fData.append("customer_name", name);
-            fData.append("customer_email", email);
-            fData.append("customer_phone_number", tel);
-            fData.append("contents", 1);
+            // Jos tarvii muuttaa päiväys pelkäksi päivämääräksi ilman kellonaikaa, startDate.toISOString().substring(0,10) jne tekee sen.
+            let alkupv = startDate.toISOString();
+            let loppupv = endDate.toISOString();
 
             const body = {
                 "total_price": 1,
-                "order_start_date": alPvm,
+                "order_start_date": alkupv,
                 "order_length_days": 1,
-                "order_end_date": loPvm,
-                "payment_due_date": loPvm,
+                "order_end_date": loppupv,
+                "payment_due_date": loppupv,
                 "customer_name": name,
                 "customer_email": email,
                 "customer_phone_number": tel,
@@ -73,6 +86,7 @@ function ConForm(){
 
     return(
         <div className="conformbg">
+            {showAlert && <Alert severity="error">{alertMessage}</Alert>}
             <form className="contact-form">
                         <div className="textbox">
                         <h2 className="head">Ota yhteyttä!</h2>
@@ -85,14 +99,15 @@ function ConForm(){
                             </div>    
                             <div className="messagebox">
                                 <label htmlFor="pvm">tarveajankohta</label><br/>
-                                <DatePicker className="messagefield" locale="fi"  selectsRange={true} startDate={alPvm} endDate={loPvm} onChange={(pvt) => {newRng(pvt)}} isClearable={true}/>
+                                <DatePicker className="messagefield" locale="fi" selectsRange={true} startDate={startDate} endDate={endDate} onChange={(update) => {setDateRange(update);}} isClearable={true}/>
                                 <label htmlFor="msg">Viesti</label><br/>
                                 <textarea  className= "messagefield" placeholder="Mitä asiasi koskee..." name="msg" id="msg" value={msg} onChange={(e) => setMsg(e.target.value)}/>
                             </div>
                             <div className="buttonbox">
-                                <button type="submit" className="nappi" name="submit" id="submit" onClick={handleSubmit}>
+                                <button className="nappi" onClick={handleClick}>
                                 <SendIcon sx={{ color: '#F2F3F5', fontSize: 35}} />
                                 </button>
+                                {showAcceptTerms && <AcceptTerms handleClose={handleClose} handleSubmit={handleSubmit}/>}
                             </div>
 
             </form>

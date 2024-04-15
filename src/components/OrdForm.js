@@ -17,6 +17,8 @@ function OrdForm(){
     //const [Content, setContent] = useState('');
     //const [price, setPrice] = useState('');
 
+
+
     const [showAcceptTerms, setShowAcceptTerms] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');
@@ -48,20 +50,23 @@ function OrdForm(){
             setShowAlert(true);
         } else{
             // Tähän pittää laittaa osote, lomake lähettää tiedot axioksella form data payloadissa. Sähköpostiin vaaditut tiedot kulkee siinä myös.
-            const url ="API TAI KANTA TÄHÄ TÄNNE LÄHTEE DATA";
+            const url =process.env.API + "/orders";
 
-            let fData = new FormData();
-            fData.append('name', name);
-            fData.append('email', email);
-            fData.append('tel', tel);
-            fData.append('startdate', startdate);
-            fData.append('enddate', enddate);
-            //fData.append('content', content);
-            //fData.append('price', price);
+            const body = {
+                "total_price": 1,
+                "order_start_date": startdate,
+                "order_length_days": 1,
+                "order_end_date": enddate,
+                "payment_due_date": enddate,
+                "customer_name": name,
+                "customer_email": email,
+                "customer_phone_number": tel,
+                "contents": 1
+            }
             
 
             // alla errori tulee alerttiin, lähinnä muistin varalta ovat tossa
-            axios.post(url,fData)
+            axios.post(url,body)
                   .then((response) => {
                     alert(response.data)
                     console.log(response.data)
