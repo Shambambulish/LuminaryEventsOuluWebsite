@@ -11,15 +11,16 @@ import { fi } from 'date-fns/locale/fi';
 registerLocale('fi', fi);
 
 
-
-
 function ConForm(){
+    // täytettävät yhteystietokentät
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [tel, setTel] = useState("");
     const [msg, setMsg] = useState("");
+    // kalenterielementin käsittely
     const [dateRange, setDateRange] = useState([null, null]);
     const [startDate, endDate] = (dateRange);
+    // Popup, errorit ja ilmoitukset
     const [showAcceptTerms, setShowAcceptTerms] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');
@@ -35,29 +36,38 @@ function ConForm(){
 
 
     const handleSubmit = () => {
+        // katotaan onhan nimeä syötetty ainaki yks merkki ja korkeintaan 35.
         if(name.length === 0 || name.length > 35) {
             setAlertMessage("Syötä Nimi.");
             setShowAlert(true);
-        }else if(email.length === 0 || email.length > 35 || email.length < 4) {
+        // katotaan onhan sähköpostiosoite syötetty, minimipituus 4, maksimipituus 35.
+        }else if(email.length > 35 || email.length < 4) {
             setAlertMessage("Syötä hyväksyttävä sähköpostiosoite.");
             setShowAlert(true);
-        }else if(tel.length === 0 || tel.length > 13 || tel.length < 7) {
+        // Katotaan onko puh.num. syötetty, minimimitta 7, maksimimitta 13. 
+        }else if(tel.length > 13 || tel.length < 7) {
             setAlertMessage("Syötä hyväksyttävä puhelinnumero.");
             setShowAlert(true);
         }else if(msg.length > 300) {
             setAlertMessage("Viestin enimmäispituus on 300 merkkiä.");
             setShowAlert(true);
-        }else if(dateRange == [null, null]){
+        // katotaan onko aikajaksoo tilaukselle valittu ollenkaan.
+        }else if(endDate === null){
             setAlertMessage("Syötä aikajakso, jona kalustoa tarvitset.");
             setShowAlert(true);
         }else{
             // Tähän pittää laittaa osote, lomake lähettää tiedot axioksella form data payloadissa. Sähköpostiin vaaditut tiedot kulkee siinä myös.
-            const url = process.env.API + "/devices";
+            // tästä calli menee orderssiin, kaikki tilaukset menee orderssiin kait, sinne pitäs ehkä lisätä kenttä viesteille.
+            const url = process.env.API + "/orders";
 
             // Jos tarvii muuttaa päiväys pelkäksi päivämääräksi ilman kellonaikaa, startDate.toISOString().substring(0,10) jne tekee sen.
-            let alkupv = startDate.toISOString();
-            let loppupv = endDate.toISOString();
+            // Jos tän kanssa on ongelmia ja/tai haluaa vain ISO-ajan POSTiin niin poistamalla .substring(0,10) saa sen aikaiseksi.
+            // Voivat olla tarpeettomia, mutta meikällä oli ongelmia api callien kaa ja nää jotenki ratkas sen eli dunno, 
+            // mysql vaa hyväksyy nämä lyhennetyt datet jstk syystä, vaikka käyttää ISO-formaattia, iha vitun tyhmää mutta w/e - Onni
+            let alkupv = startDate.toISOString().substring(0,10);
+            let loppupv = endDate.toISOString().substring(0,10);
 
+            // axioksen http callin json body, menee postina apiin. HINTA, KESTO ja SISÄLTÖ ON PLACEHOLDEREITA
             const body = {
                 "total_price": 1,
                 "order_start_date": alkupv,
