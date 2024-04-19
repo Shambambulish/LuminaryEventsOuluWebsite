@@ -11,8 +11,8 @@
     justify-content:center;
     color: white;
     font-size:1.1em;
-    position: relative;
     text-align:center;
+    margin-top: 2em;
     margin-bottom: 2em;
     transition: transform 0.5s ease-in-out;
 }
@@ -27,12 +27,13 @@
   margin-top: 0.5em;
   display: flex;
   flex-direction: column;
+  margin-bottom: 2em;
 }
 .messagebox{
   display: flex;
   flex-direction: column;
   margin-right: 4em;
-  margin-top: 4.5em;
+  margin-top: 4.9em;
 }
 
 .buttonbox{
@@ -74,11 +75,11 @@
   color: white;
 }
 .messagefield{
-  height: 100%;
+  height: 42%;
   border-radius: 8px;
   display: flex;
   margin: 0.5em;
-  margin-left: 2em;
+  margin-left: 0.5em;
   font-family: Quicksand, sans-serif !important;
   border-radius: 8px;
   padding: 0.5em;
@@ -93,9 +94,53 @@
   margin: 0.5em;
   font-size: 1em;
 }
+.datefield {
+  width: 75%;
+  font-family: Quicksand, sans-serif !important;
+  border-radius: 8px;
+  padding: 0.9em;
+  padding-right: 5em;
+  margin: 0.5em;
+  font-size: 1em;
+}
+
+.react-datepicker-wrapper,
+.react-datepicker {
+  font-family: Quicksand, sans-serif !important;
+  text-transform: capitalize;
+  border: none !important;
+}
+.react-datepicker__month-container {
+  border-radius: 2%;
+  border: 2px solid #a2a2a3d3 !important;
+}
+.react-datepicker__day--in-range:hover,
+.react-datepicker__day--in-range{
+  background-color: #7e7e7e !important;
+}
+.react-datepicker__day--today{
+  border-radius: 0.3rem;
+  background-color: #cccccc !important;
+}
+.react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range, 
+.react-datepicker__month-text--in-range, 
+.react-datepicker__quarter-text--in-range, .react-datepicker__year-text--in-range){
+  background-color: #7e7e7e !important;
+}
 
 
-@media only screen and (max-width: 1020px) {
+.react-datepicker__close-icon::after{
+  background-color: #7e7e7e !important;
+  font-size: medium !important;
+}
+.react-datepicker__close-icon{
+  color: #7e7e7e !important;
+  
+}
+
+
+
+@media only screen and (max-width: 1200px) {
   .contact-form {
     transition: 0.5s ease; 
     scale: 0.8;
@@ -124,6 +169,9 @@
   .textfield {
     width: 50%;
   }
+  .datefield {
+    width: 50%;
+  }
   .buttonbox{
     margin-left: 0.5em;
     margin-right: 3em;
@@ -134,7 +182,7 @@
 
 
 
-@media only screen and (max-width: 510px) {
+@media only screen and (max-width: 650px) {
   .head{
     margin-top: 2em;
     margin-left: 0;
@@ -162,9 +210,9 @@
   }
   .messagebox{
     display: flex;
-    align-items: center;
+    width: 80%;
     align-self: center;
-    margin-top: 0.5em;
+    margin-top: -1em;
     margin-left: 0;
     margin-right: 0;
   }
@@ -178,8 +226,18 @@
   .textfield {
     width: 75%;
   }
+  .react-datepicker__input-container,
+  .react-datepicker-wrapper{
+    width: 100%;
+    display: flex;
+  }
+  .datefield {
+    margin-left: -0.5em;
+    width: 80%;
+  }
   .messagefield{
-    width: 166%;
+    align-self: center;
+    width: 100%;
     height: 100%;
     margin-left: 0.5;
   }

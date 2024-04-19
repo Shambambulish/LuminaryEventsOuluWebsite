@@ -76,8 +76,17 @@
   align-self: center;
   width: fit-content;
 }
+.datefield {
+  width: 75%;
+  font-family: Quicksand, sans-serif !important;
+  border-radius: 8px;
+  padding: 0.9em;
+  padding-right: 5em;
+  margin: 0.5em;
+  font-size: 1em;
+}
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1200px) {
   .order-form {
     transition: 0.5s ease; 
     scale: 0.8;
@@ -143,4 +152,5 @@
   .ordtextfield {
     width: 75%;
   }
+  
 }

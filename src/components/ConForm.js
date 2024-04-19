@@ -108,8 +108,8 @@ function ConForm(){
                                 <PhoneInput className= "textfield" country="FI" placeholder="+358..."  name="tel" id="tel" value={tel} onChange={setTel} />
                             </div>    
                             <div className="messagebox">
-                                <label htmlFor="pvm">tarveajankohta</label><br/>
-                                <DatePicker className="messagefield" locale="fi" selectsRange={true} startDate={startDate} endDate={endDate} onChange={(update) => {setDateRange(update);}} isClearable={true}/>
+                                <label htmlFor="pvm">Tarveajankohta</label><br/>
+                                <DatePicker className="datefield" locale="fi" minDate={new Date()} selectsRange={true} startDate={startDate} endDate={endDate} onChange={(update) => {setDateRange(update);}} isClearable={true}/>
                                 <label htmlFor="msg">Viesti</label><br/>
                                 <textarea  className= "messagefield" placeholder="Mitä asiasi koskee..." name="msg" id="msg" value={msg} onChange={(e) => setMsg(e.target.value)}/>
                             </div>

@@ -108,7 +108,7 @@ function OrdForm(){
                     <div className="ordrightbox">
                         <div className="items">
                             <label htmlFor="pvm">tarveajankohta</label><br/>
-                                <DatePicker className="messagefield" locale="fi" selectsRange={true} startDate={startDate} endDate={endDate} onChange={(update) => {setDateRange(update);}} isClearable={true}/>
+                                <DatePicker className="datefield" locale="fi" minDate={new Date()} selectsRange={true} startDate={startDate} endDate={endDate} onChange={(update) => {setDateRange(update);}} isClearable={true}/>
                             <label htmlFor="content">Lista vuokrattavista tavaroista:</label>
                             <label htmlFor="content" name="content" id="content"/>
                             <label htmlFor="price">Hinta:</label>
