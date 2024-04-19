@@ -77,7 +77,9 @@ function ConForm(){
                 "customer_name": name,
                 "customer_email": email,
                 "customer_phone_number": tel,
-                "contents": 1
+                "contents": 1,
+                "order_status": "contact",
+                "message": msg,
             }
 
             // alla errori tulee alerttiin, lähinnä muistin varalta ovat tossa
