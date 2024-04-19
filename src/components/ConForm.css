@@ -31,8 +31,10 @@
 .messagebox{
   display: flex;
   flex-direction: column;
+  margin-right: 4em;
   margin-top: 4.5em;
 }
+
 .buttonbox{
   display: flex;
   margin-top: 17.6em;
