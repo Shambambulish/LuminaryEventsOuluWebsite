@@ -9,10 +9,7 @@ const SmallEquipment = () => {
         <div className="background">
             <Header/>
             <div className="banner">
-                <div className="textblock">Mainospuhe: mallia super epic</div>
-            </div>
-            <div>
-                <div className="text-container">
+                <div className="textblock">
                     <div className="slogan">Luminary Events Oulu, se täyden palvelun monipuolinen audiotalo.</div>
                     <br/>
                     <div className="textblock">Meiltä joustavat ratkaisut kaikenlaisiin tapahtumiin tarvitset sitten
@@ -39,11 +36,13 @@ const SmallEquipment = () => {
                         <br/>
                     </div>
                 </div>
+            </div>
+            <div>
                 <div>
                     <DeviceList/>
                 </div>
             </div>
-            
+
             <Footer/>
         </div>
     );
