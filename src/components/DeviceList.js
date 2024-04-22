@@ -255,7 +255,7 @@ const DeviceList = () => {
             {sortedDevices.map(device => (
                 <div class="grid-container">
                 <div class="grid-item grid-item-1" key={`${device.id}-1`}><button onClick={() => addContents(device.id, device.name, device.price_per_day, device.current_stock)}>+</button>{checkCount(device.id)}<button onClick={() => removeContents(device.id)}>-</button></div>
-                <div class="grid-item grid-item-2" key={`${device.id}-2`}><img src={require(`./img/${device.name}.jpg`) || sampleimg} width="150" height="150"></img></div>
+                <div class="grid-item grid-item-2" key={`${device.id}-2`}><img src={require(`./img/devices/${device.name}.jpg`) || sampleimg} width="150" height="150"></img></div>
                 <div class="grid-item grid-item-3" key={`${device.id}-3`}>{device.name}</div>
                 <div class="grid-item grid-item-4" key={`${device.id}-4`}>{device.description}</div>
                 <div class="grid-item grid-item-5" key={`${device.id}-5`}><p>{device.price_per_day}€/vrk</p></div>
