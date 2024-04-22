@@ -1,6 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import OrdForm from "./OrdForm";
+import DeviceList from "./DeviceList";
 import "./Frontpage.css";
 
 const SmallEquipment = () => {
@@ -39,8 +39,8 @@ const SmallEquipment = () => {
                         <br/>
                     </div>
                 </div>
-                <div className="text-container">
-                    <OrdForm/>
+                <div>
+                    <DeviceList/>
                 </div>
             </div>
             
