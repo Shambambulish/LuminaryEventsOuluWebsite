@@ -25,6 +25,7 @@ const DeviceList = () => {
     const [email, setEmail] = useState('');
     const [tel, setTel] = useState('');
     const [orderLength, setOrderLength] = useState(1);
+    const [msg, setMsg] = useState("");
     // kalenterielementin käsittely
     const [dateRange, setDateRange] = useState([null, null]);
     const [startDate, endDate] = (dateRange);
@@ -85,6 +86,7 @@ const DeviceList = () => {
                 "customer_name": name,
                 "customer_email": email,
                 "customer_phone_number": tel,
+                "message": msg,
                 "contents": contents
             }
             
@@ -245,9 +247,9 @@ const DeviceList = () => {
             
         <div class="category-grid">
             <button autoFocus onClick={() => swapCategory('kaikki')}>Kaikki</button>
-            <button onClick={() => swapCategory('ylä-ääni')}>Ylä-äänet</button>
+            <button onClick={() => swapCategory('kokoääni')}>Kokoäänikaiuttimet</button>
             <button onClick={() => swapCategory('sub')}>Subwooferit</button>
-            <button onClick={() => swapCategory('dj')}>DJ-pöydät</button>
+            <button onClick={() => swapCategory('dj')}>DJ-tarvikkeet</button>
             <button onClick={() => swapCategory('lavatekniikka')}>Lavatekniikka</button>
         </div>
 
@@ -303,6 +305,9 @@ const DeviceList = () => {
                         <div className="items">
                             <label htmlFor="pvm">Tarveajankohta</label><br/>
                                 <DatePicker className="messagefield" locale="fi" selectsRange={true} startDate={startDate} endDate={endDate} onChange={(update) => {console.log("updating daterange", startDate);setDateRange(update); getOrderLength(update)}} isClearable={true}/>
+                            
+                                <label htmlFor="msg">Viesti</label><br/>
+                            <textarea  className= "messagefield" placeholder="Mitä asiasi koskee..." name="msg" id="msg" value={msg} onChange={(e) => setMsg(e.target.value)}/>
                             <label htmlFor="length">Tilauksen kesto (päiviä):</label>
                             <label htmlFor="length" name="length" id="length">{orderLength}</label>
                             <label htmlFor="price">Tilauksen hinta:</label>
