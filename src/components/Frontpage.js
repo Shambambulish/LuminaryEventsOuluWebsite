@@ -17,24 +17,7 @@ const Frontpage = () => {
 
     return (
         <div className="background">
-            <Header/>
-            <Carousel className="carousel" infiniteLoop={true} showThumbs={false} autoPlay={true} stopOnHover={true} interval={10000} transitionTime={500}>
-                <div>
-                    <img src={carousel1} />
-                </div>
-                <div>
-                    <img src={carousel2} />
-                </div>
-                <div>
-                    <img src={carousel3} />
-                </div>
-                <div>
-                    <img src={carousel4} />
-                </div>
-                <div>
-                    <img src={carousel5} />
-                </div>
-            </Carousel>
+            <Header/> 
             <div className="banner">
                 <div className="textblock">
                     <div className="slogan">Luminary Events Oulu, se täyden palvelun monipuolinen audiotalo.</div>
@@ -64,6 +47,23 @@ const Frontpage = () => {
                     </div>
                 </div>
             </div>
+            <Carousel className="carousel" dynamicHeight={true} infiniteLoop={true} showThumbs={false} autoPlay={true} stopOnHover={true} interval={10000} transitionTime={500}>
+                <div>
+                    <img src={carousel1} />
+                </div>
+                <div>
+                    <img src={carousel2} />
+                </div>
+                <div>
+                    <img src={carousel3} />
+                </div>
+                <div>
+                    <img src={carousel4} />
+                </div>
+                <div>
+                    <img src={carousel5} />
+                </div>
+            </Carousel>
             <div>
                 <div className="text-container">
                     <ConForm/>
