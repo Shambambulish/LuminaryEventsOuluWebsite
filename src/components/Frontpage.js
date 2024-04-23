@@ -4,13 +4,28 @@ import "./Frontpage.css";
 import logo from "./img/logo.png";
 import logo2 from "./img/Logo2.png";
 import ConForm from "./ConForm";
+import carousel1 from "./img/carousel/carousel1.JPG";
+import carousel2 from "./img/carousel/carousel2.JPG";
+import carousel3 from "./img/carousel/carousel3.png";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 
 const Frontpage = () => {
-                //!!! banner grid not working quite as intended !!!
+
     return (
         <div className="background">
             <Header/>
+            <Carousel className="carousel" infiniteLoop={true} showThumbs={false} autoPlay={true} stopOnHover={true} interval={10000} transitionTime={500}>
+                <div>
+                    <img src={carousel1} />
+                    <p className="legend">Legend 1</p>
+                </div>
+                <div>
+                    <img src={carousel2} />
+                    <p className="legend">Legend 2</p>
+                </div>
+            </Carousel>
             <div className="banner">
                 <div className="textblock">
                     <div className="slogan">Luminary Events Oulu, se täyden palvelun monipuolinen audiotalo.</div>

@@ -113,4 +113,10 @@
     border-radius: 20px;
     padding: 2%;
   }
-  
+ .carousel {
+    max-height: 50dvh;
+    max-width: 95%;
+    align-content: center;
+    margin-left: auto;
+    border-radius: 20px;
+ }
