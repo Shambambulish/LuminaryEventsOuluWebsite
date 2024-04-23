@@ -6,7 +6,9 @@ import logo2 from "./img/Logo2.png";
 import ConForm from "./ConForm";
 import carousel1 from "./img/carousel/carousel1.JPG";
 import carousel2 from "./img/carousel/carousel2.JPG";
-import carousel3 from "./img/carousel/carousel3.png";
+import carousel3 from "./img/carousel/carousel3.jpg";
+import carousel4 from "./img/carousel/carousel4.jpg";
+import carousel5 from "./img/carousel/carousel5.jpg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
@@ -19,11 +21,18 @@ const Frontpage = () => {
             <Carousel className="carousel" infiniteLoop={true} showThumbs={false} autoPlay={true} stopOnHover={true} interval={10000} transitionTime={500}>
                 <div>
                     <img src={carousel1} />
-                    <p className="legend">Legend 1</p>
                 </div>
                 <div>
                     <img src={carousel2} />
-                    <p className="legend">Legend 2</p>
+                </div>
+                <div>
+                    <img src={carousel3} />
+                </div>
+                <div>
+                    <img src={carousel4} />
+                </div>
+                <div>
+                    <img src={carousel5} />
                 </div>
             </Carousel>
             <div className="banner">

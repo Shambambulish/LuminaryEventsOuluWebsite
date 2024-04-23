@@ -120,3 +120,8 @@
     margin-left: auto;
     border-radius: 20px;
  }
+ @media (max-width: 720px) {
+    .carousel {
+        max-height: 50%;
+    }
+ }
