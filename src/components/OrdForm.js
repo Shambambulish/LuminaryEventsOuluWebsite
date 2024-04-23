@@ -7,6 +7,7 @@ import AcceptTerms from "./tosaccept";
 import Alert from '@mui/material/Alert';
 import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import emailjs from '@emailjs/browser';
 import { fi } from 'date-fns/locale/fi';
 registerLocale('fi', fi);
 
@@ -15,6 +16,7 @@ function OrdForm(){
     // täytettävät yhteystietokentät
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [orderLength, setOrderLength] = useState(1);
     const [tel, setTel] = useState('');
     // kalenterielementin käsittely
     const [dateRange, setDateRange] = useState([null, null]);
@@ -70,7 +72,7 @@ function OrdForm(){
             const body = {
                 "total_price": 1,
                 "order_start_date": alkupv,
-                "order_length_days": 1,
+                "order_length_days": orderLength,
                 "order_end_date": loppupv,
                 "payment_due_date": loppupv,
                 "customer_name": name,
@@ -85,12 +87,52 @@ function OrdForm(){
                   .then((response) => {
                     alert(response.data)
                     console.log(response.data)
+                    console.log(response.status);
+                    if(response.status == 201){
+                        emailjs.init({
+                            publicKey: process.env.REACT_APP_PUBLIC_KEY,
+                            // Do not allow headless browsers
+                            blockHeadless: true,
+                            blockList: {
+                                // Block the suspended emails
+                                list: ['foo@emailjs.com', 'bar@emailjs.com'],
+                                // The variable contains the email address
+                                watchVariable: 'userEmail',
+                                },
+                            limitRate: {
+                                // Set the limit rate for the application
+                                id: 'app',
+                                // Allow 1 request per 10s
+                                throttle: 10000,
+                            },
+                        });
+                        emailjs.send(
+                            process.env.REACT_APP_SERVICE_ID,
+                            process.env.REACT_APP_ORDTEMPLATE_ID,
+                            body,
+                            process.env.REACT_APP_PUBLIC_KEY
+                        )
+                        .then((result) => {
+                                console.log(result);
+                        }, (error) => {
+                                console.log(error);
+                        });
+                    }
                   }).catch(error => {
                     alert(error)
                     console.log(error)
                   });
 
         }
+    }
+
+    const getOrderLength = ([date_a, date_b]) => {
+        console.log('in order length function')
+        if (date_a === null || date_b === null){setOrderLength(1);return;}
+        console.log('setting order date')
+        let msDay = 24 * 60 * 60 * 1000; // milliseconds per day
+        const days = Math.round(Math.abs(date_a.getTime() - date_b.getTime()) / msDay) + 1;
+        setOrderLength(days);
     }
 
     return(
@@ -108,7 +150,7 @@ function OrdForm(){
                     <div className="ordrightbox">
                         <div className="items">
                             <label htmlFor="pvm">tarveajankohta</label><br/>
-                                <DatePicker className="datefield" locale="fi" minDate={new Date()} selectsRange={true} startDate={startDate} endDate={endDate} onChange={(update) => {setDateRange(update);}} isClearable={true}/>
+                                <DatePicker className="datefield" locale="fi" minDate={new Date()} selectsRange={true} startDate={startDate} endDate={endDate} onChange={(update) => {console.log("updating daterange", startDate);setDateRange(update); getOrderLength(update)}} isClearable={true}/>
                             <label htmlFor="content">Lista vuokrattavista tavaroista:</label>
                             <label htmlFor="content" name="content" id="content"/>
                             <label htmlFor="price">Hinta:</label>
