@@ -62,11 +62,21 @@
     -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
 }
-
 .text-container-grid{
     padding: 10%;
     text-align:center;
     width: 85%;
+    margin-bottom: 2%;
+    height: 100%;
+    color: white;
+    position: relative;
+    justify-content: space-evenly;
+}
+.dj-text-container-grid{
+    padding: 10%;
+    text-align:center;
+    width: 85%;
+    margin-top: 50%;
     margin-bottom: 2%;
     height: 100%;
     color: white;
@@ -89,6 +99,9 @@
   }
 
 @media only screen and (max-width: 1300px){
+    .dj-text-container-grid{
+        margin-top: 0%;
+    }
     .dj-grid{
         display: block;
     }

@@ -3,6 +3,8 @@ import Footer from "./Footer";
 import "./Frontpage.css";
 import ConForm from "./ConForm";
 import React from "react";
+import pak1 from "./img/pak1.jpg";
+import pak2 from "./img/pak2.jpg";
 
 
 const LargeEquipment = () => {
@@ -38,7 +40,7 @@ const LargeEquipment = () => {
                     <div className="textblock">vastaus tähän</div>
                 </div>
                 <div className="image-container">
-                    <img src="https://placehold.co/500x500" alt="dj" className="LargeEquipmentImage"/>
+                    <img src={pak1} width="700" alt="dj" className="LargeEquipmentImage"/>
                 </div>
             </div>
             <br/>
@@ -70,7 +72,7 @@ const LargeEquipment = () => {
                     <div className="textblock">Ei kuulu sinulle</div>
                 </div>
                 <div className="image-container">
-                    <img src="https://placehold.co/500x500" alt="dj" className="LargeEquipmentImage"/>
+                    <img src={pak2} width="500" alt="dj" className="LargeEquipmentImage"/>
                 </div>
             </div>
             <br/>
