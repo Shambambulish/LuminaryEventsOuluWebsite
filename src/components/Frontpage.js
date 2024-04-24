@@ -47,6 +47,7 @@ const Frontpage = () => {
                     </div>
                 </div>
             </div>
+            <div className="carousel-container">
             <Carousel className="carousel" dynamicHeight={true} infiniteLoop={true} showThumbs={false} autoPlay={true} stopOnHover={true} interval={10000} transitionTime={500}>
                 <div>
                     <img src={carousel1} />
@@ -64,6 +65,7 @@ const Frontpage = () => {
                     <img src={carousel5} />
                 </div>
             </Carousel>
+            </div>
             <div>
                 <div className="text-container">
                     <ConForm/>

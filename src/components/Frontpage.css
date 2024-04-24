@@ -88,20 +88,22 @@
 }
 
 .image-container {
-    /* Style the image container as needed */
     display: flex;
     position: relative;
     width: 100%;
   }
 .image-container img {
-    /* Style the image as needed */
     max-width: 90%;
     height: auto;
     border-radius: 20px;
     padding: 2%;
   }
+  .carousel-container {
+    max-width: 65%;
+    max-height: 50%;
+    align-self: center;
+  }
  .carousel {
-    max-width: 95%;
     margin-left: auto;
     border-radius: 20px;
     margin-bottom: 2%;
@@ -110,4 +112,8 @@
     .carousel {
         max-height: 50%;
     }
- }
+    .carousel-container {
+        margin-top: 5%;
+        margin-bottom: 5%;
+      }
+    }
