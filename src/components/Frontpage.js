@@ -48,7 +48,7 @@ const Frontpage = () => {
                 </div>
             </div>
             <div className="carousel-container">
-            <Carousel className="carousel" dynamicHeight={true} infiniteLoop={true} showThumbs={false} autoPlay={true} stopOnHover={true} interval={10000} transitionTime={500}>
+            <Carousel className="carousel" dynamicHeight={false} infiniteLoop={true} showThumbs={false} showArrows={false} showStatus={false} autoPlay={true} interval={7000} transitionTime={500}>
                 <div>
                     <img src={carousel1} />
                 </div>

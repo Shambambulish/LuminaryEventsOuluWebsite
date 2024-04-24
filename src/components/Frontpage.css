@@ -95,14 +95,29 @@
 .image-container img {
     max-width: 90%;
     height: auto;
-    border-radius: 20px;
-    padding: 2%;
   }
   .carousel-container {
-    max-width: 65%;
-    max-height: 50%;
+    display: flex;
+    position: relative;
+    max-width: auto;
+    max-height: 720px;
+    justify-content: center;
     align-self: center;
+    margin-bottom: 2%;
+    border-radius: 20px;
   }
+.carousel-container img {
+    margin: 0;
+    position: relative;
+    justify-content: center;
+    object-fit:scale-down;
+    width: auto;
+    max-height: 720px;
+    border-radius: 20px;
+}
+
+.carousel .slide { display: flex; justify-content: center; } 
+
  .carousel {
     margin-left: auto;
     border-radius: 20px;
