@@ -4,6 +4,8 @@ import axios from 'axios';
 import './DeviceList.css';
 import sampleimg from './img/1x1sample.png';
 
+
+
 // ord form importit
 import "./OrdForm.css";
 import PhoneInput from "react-phone-number-input/input";
@@ -96,8 +98,6 @@ const DeviceList = () => {
             axios.post(url,body)
                   .then((response) => {
                     alert(response.data)
-                    console.log(response.data)
-                    console.log(response.status);
                     if(response.status === 201){
                         emailjs.init({
                             publicKey: process.env.REACT_APP_PUBLIC_KEY,
@@ -146,46 +146,35 @@ const DeviceList = () => {
 
 
     const addContents = (device_id, device_name, device_price, device_stock) => {
-        console.log('Trying to add device:', device_id, device_name, device_price);
         for (let i = 0; i < contents.length; i++) {
             if(contents[i].id === device_id){
                 if (contents[i].count === device_stock){
-                    console.log('Device already in cart, but stock is full, cannot add more');
                     return;
                 }
-                console.log('Device already in cart, adding to count');
                 var varcontents = [...contents]
-                console.log('Old count:', varcontents[i].count);
                 varcontents[i].count = varcontents[i].count + 1;
-                console.log('New count:', varcontents[i].count);
                 setContents(varcontents);
                 return;
             }
         }
-        console.log('Device not in cart, adding to cart', device_id, device_name, device_price);
         if(device_stock !== 0){
         setContents(contents.concat({id: device_id, name: device_name, price: device_price, count: 1}));
         } else {
-            console.log('Device out of stock, cannot add to cart');
         }
     }
 
     const removeContents = (device_id) => {
-        console.log('Trying to remove device:', device_id);
         for (let i = 0; i < contents.length; i++) {
             if(contents[i].id === device_id){
-                console.log('Device found in cart, reducing count');
                 const varcontents = [...contents]
                 varcontents[i].count = varcontents[i].count - 1;
                 if (varcontents[i].count === 0){
-                    console.log('Count 0, removing from cart');
                     varcontents.splice(i, 1);
                 }
                 setContents(varcontents);
                 return;
             }
         }
-        console.log('Device not in cart, nothing to remove');
     }
 
     const checkCount = (device_id) => {
@@ -207,9 +196,7 @@ const DeviceList = () => {
     }
 
     const getOrderLength = ([date_a, date_b]) => {
-        console.log('in order length function')
         if (date_a === null || date_b === null){setOrderLength(1);return;}
-        console.log('setting order date')
         let msDay = 24 * 60 * 60 * 1000; // milliseconds per day
         const days = Math.round(Math.abs(date_a.getTime() - date_b.getTime()) / msDay) + 1;
         setOrderLength(days);
@@ -219,38 +206,34 @@ const DeviceList = () => {
 
         const newSortedDevices = []
 
-        console.log('Swapping category');
         setSortedDevices(null)
-        console.log('Emptied sorted devices:', sortedDevices)
         if (device_type === 'kaikki'){
-            console.log('Selected category is all devices');
             setSortedDevices(devices);
             return;
         }
         for (let i = 0; i < devices.length; i++) {
             if(devices[i].type === device_type){
-                console.log('Found device with category:', device_type);
                 
                 newSortedDevices.push(devices[i]);
             }
         }
         setSortedDevices(newSortedDevices);
-        console.log('New sorted devices:', sortedDevices);
     }
 
     const prepareContents = () => {
-        console.log('Preparing contents');
         const preparedContents = [];
         for (let i = 0; i < contents.length; i++) {
             preparedContents.push({device_id: contents[i].id, count: contents[i].count});
         }
-        console.log('Prepared contents:', preparedContents);
         return preparedContents;
     }
 
     const getImage = (device_name) => {
-        const img = require(`./img/${device_name}.jpg`);
-        return img || sampleimg;
+        let str = device_name
+        str = str.replace(/\u00e4/g, "a")
+        console.log(str)
+        const img = require(`./img/devices/${str}.jpg`);
+        return img;
     }
 
 
@@ -260,10 +243,8 @@ const DeviceList = () => {
             try {
                 const response = await axios.get(`${url}/devices`);
                 setDevices(response.data);
-                console.log('Devices fetched:', response.data)
                 setSortedDevices(response.data)
             } catch (error) {
-                console.error('Error fetching devices:', error);
             }
         };
 
@@ -289,7 +270,7 @@ const DeviceList = () => {
             {sortedDevices.map(device => (
                 <div class="grid-container">
                 <div class="grid-item grid-item-1" key={`${device.id}-1`}><button onClick={() => addContents(device.id, device.name, device.price_per_day, device.current_stock)}>+</button>{checkCount(device.id)}<button onClick={() => removeContents(device.id)}>-</button></div>
-                <div class="grid-item grid-item-2" key={`${device.id}-2`}><img src={require(`./img/devices/${device.name}.jpg`) || sampleimg} width="150" height="150"></img></div>
+                <div class="grid-item grid-item-2" key={`${device.id}-2`}><img src={getImage(device.name)} width="150" height="150"></img></div>
                 <div class="grid-item grid-item-3" key={`${device.id}-3`}>{device.name}</div>
                 
                 <div class="grid-item grid-item-5" key={`${device.id}-5`}><p>{device.price_per_day}€/vrk</p></div>
@@ -336,7 +317,7 @@ const DeviceList = () => {
                     <div className="ordrightbox">
                         <div className="items">
                             <label htmlFor="pvm">Tarveajankohta</label><br/>
-                                <DatePicker className="messagefield" locale="fi" selectsRange={true} startDate={startDate} endDate={endDate} onChange={(update) => {console.log("updating daterange", startDate);setDateRange(update); getOrderLength(update)}} isClearable={true}/>
+                                <DatePicker className="messagefield" locale="fi" selectsRange={true} startDate={startDate} endDate={endDate} onChange={(update) => {setDateRange(update); getOrderLength(update)}} isClearable={true}/>
                             
                                 <label htmlFor="msg">Viesti</label><br/>
                             <textarea  className= "messagefield" placeholder="Mitä asiasi koskee..." name="msg" id="msg" value={msg} onChange={(e) => setMsg(e.target.value)}/>
