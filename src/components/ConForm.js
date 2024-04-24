@@ -7,6 +7,7 @@ import AcceptTerms from "./tosaccept";
 import Alert from '@mui/material/Alert';
 import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import emailjs from '@emailjs/browser';
 import { fi } from 'date-fns/locale/fi';
 registerLocale('fi', fi);
 
@@ -16,6 +17,7 @@ function ConForm(){
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [tel, setTel] = useState("");
+    const [orderLength, setOrderLength] = useState(1);
     const [msg, setMsg] = useState("");
     // kalenterielementin käsittely
     const [dateRange, setDateRange] = useState([null, null]);
@@ -69,15 +71,15 @@ function ConForm(){
 
             // axioksen http callin json body, menee postina apiin. HINTA, KESTO ja SISÄLTÖ ON PLACEHOLDEREITA
             const body = {
-                "total_price": 1,
+                "total_price": 0,
                 "order_start_date": alkupv,
-                "order_length_days": 1,
+                "order_length_days": orderLength,
                 "order_end_date": loppupv,
                 "payment_due_date": loppupv,
                 "customer_name": name,
                 "customer_email": email,
                 "customer_phone_number": tel,
-                "contents": 1,
+                "contents": 0,
                 "order_status": "contact",
                 "message": msg,
             }
@@ -85,15 +87,54 @@ function ConForm(){
             // alla errori tulee alerttiin, lähinnä muistin varalta ovat tossa
             axios.post(url,body)
                   .then((response) => {
-                    // alertin voi poistaa tuotantoon mennessä.
                     alert(response.data)
                     console.log(response.data)
+                    console.log(response.status);
+                    if(response.status == 201){
+                        emailjs.init({
+                            publicKey: process.env.REACT_APP_PUBLIC_KEY,
+                            // Do not allow headless browsers
+                            blockHeadless: true,
+                            blockList: {
+                                // Block the suspended emails
+                                list: ['foo@emailjs.com', 'bar@emailjs.com'],
+                                // The variable contains the email address
+                                watchVariable: 'userEmail',
+                                },
+                            limitRate: {
+                                // Set the limit rate for the application
+                                id: 'app',
+                                // Allow 1 request per 10s
+                                throttle: 10000,
+                            },
+                        });
+                        emailjs.send(
+                            process.env.REACT_APP_SERVICE_ID,
+                            process.env.REACT_APP_CONTEMPLATE_ID,
+                            body,
+                            process.env.REACT_APP_PUBLIC_KEY
+                        )
+                        .then((result) => {
+                            console.log(result);
+                        }, (error) => {
+                            console.log(error);
+                        });
+                }
                   }).catch(error => {
                     alert(error)
                     console.log(error)
                   });
 
         }
+    }
+
+    const getOrderLength = ([date_a, date_b]) => {
+        console.log('in order length function')
+        if (date_a === null || date_b === null){setOrderLength(1);return;}
+        console.log('setting order date')
+        let msDay = 24 * 60 * 60 * 1000; // milliseconds per day
+        const days = Math.round(Math.abs(date_a.getTime() - date_b.getTime()) / msDay) + 1;
+        setOrderLength(days);
     }
 
     return(
@@ -111,7 +152,7 @@ function ConForm(){
                             </div>    
                             <div className="messagebox">
                                 <label htmlFor="pvm">Tarveajankohta</label><br/>
-                                <DatePicker className="datefield" locale="fi" minDate={new Date()} selectsRange={true} startDate={startDate} endDate={endDate} onChange={(update) => {setDateRange(update);}} isClearable={true}/>
+                                <DatePicker className="datefield" locale="fi" minDate={new Date()} selectsRange={true} startDate={startDate} endDate={endDate} onChange={(update) => {console.log("updating daterange", startDate);setDateRange(update); getOrderLength(update)}} isClearable={true}/>
                                 <label htmlFor="msg">Viesti</label><br/>
                                 <textarea  className= "messagefield" placeholder="Mitä asiasi koskee..." name="msg" id="msg" value={msg} onChange={(e) => setMsg(e.target.value)}/>
                             </div>

@@ -12,6 +12,7 @@ import AcceptTerms from "./tosaccept";
 import Alert from '@mui/material/Alert';
 import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import emailjs from '@emailjs/browser';
 import { fi } from 'date-fns/locale/fi';
 registerLocale('fi', fi);
 
@@ -96,6 +97,37 @@ const DeviceList = () => {
                   .then((response) => {
                     alert(response.data)
                     console.log(response.data)
+                    console.log(response.status);
+                    if(response.status == 201){
+                        emailjs.init({
+                            publicKey: process.env.REACT_APP_PUBLIC_KEY,
+                            // Do not allow headless browsers
+                            blockHeadless: true,
+                            blockList: {
+                                // Block the suspended emails
+                                list: ['foo@emailjs.com', 'bar@emailjs.com'],
+                                // The variable contains the email address
+                                watchVariable: 'userEmail',
+                                },
+                            limitRate: {
+                                // Set the limit rate for the application
+                                id: 'app',
+                                // Allow 1 request per 10s
+                                throttle: 10000,
+                            },
+                        });
+                        emailjs.send(
+                            process.env.REACT_APP_SERVICE_ID,
+                            process.env.REACT_APP_ORDTEMPLATE_ID,
+                            body,
+                            process.env.REACT_APP_PUBLIC_KEY
+                        )
+                        .then((result) => {
+                            console.log(result);
+                        }, (error) => {
+                            console.log(error);
+                        });
+                }
                   }).catch(error => {
                     alert(error)
                     console.log(error)
