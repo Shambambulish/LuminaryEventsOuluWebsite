@@ -19,25 +19,22 @@ const LargeEquipment = () => {
                 <div className="text-container-grid">
                     <div className="slogan">Esimerkkipaketti Pienille Tapahtumille</div>
                     <br/>
-                    <div className="textblock">Pro112 Kokoäänet 2 kpl | 50€/vrk
+                    <div className="textblock">Pro112 Kokoäänet 2 kpl 
                     <br/>
                     <br/>
-                    Proel115 Subwoofer 1 kpl | 15€/vrk
+                    Proel115 Subwoofer 1 kpl  
                     <br/>
                     <br/>
-                    Kaijuttimen tolpat | 75€/vrk 
+                    Kaiuttimen tolpat  
                     <br/>
                     <br/>
-                    Asennus | 50€
+                    Laitteiden Asennus 
                     </div>
                     <br/>
                     <div className="subquestion">Paketin mukana sisältyvät myös valoja tarvittaessa lisähintaan </div>
                     <br/>
-                    <br/>
-                    <div className="subquestion">Mitä lisälaitteita/kaapeleita/ym tämä paketti sisältää?
-                    </div>
-                    <br/>
-                    <div className="textblock">vastaus tähän</div>
+                    <div className="subquestion">Vuokraan kuuluu tarvittavat kaapelit ja tavalliset kaiutintelineet.</div>
+                    
                 </div>
                 <div className="image-container">
                     <img src={pak1} width="700" alt="dj" className="LargeEquipmentImage"/>
@@ -48,28 +45,24 @@ const LargeEquipment = () => {
                 <div className="text-container-grid">
                 <div className="slogan">Esimerkkipaketti Keskikokoisille Tapahtumille</div>
                     <br/>
-                    <div className="textblock">Pro112 Kokoäänet 2 kpl | 50€/vrk
+                    <div className="textblock">Pro112 Kokoäänet 2 kpl 
                     <br/>
                     <br/>
-                    Passive18 Subwoofer 2 kpl | 50€/vrk
+                    Passive18 Subwoofer 2 kpl 
                     <br/>
                     <br/>
-                    Kaijuttimen tolpat | 120€/vrk 
+                    Kaiuttimen tolpat  
                     <br/>
                     <br/>
-                    Behringer 6000D Vahvistin 1kpl | Lisää Hinta tähän
+                    Behringer 6000D Vahvistin 1kpl 
                     <br/>
                     <br/>
-                    Asennus | 50€
+                    Laitteiden Asennus 
                     </div>
                     <br/>
                     <div className="subquestion">Paketin mukana sisältyvät myös valoja tarvittaessa lisähintaan </div>
                     <br/>
-                    <br/>
-                    <div className="subquestion">Mitä lisälaitteita/kaapeleita/ym tämä paketti sisältää?
-                    </div>
-                    <br/>
-                    <div className="textblock">Ei kuulu sinulle</div>
+                    <div className="subquestion">Vuokraan kuuluu tarvittavat kaapelit ja tavalliset kaiutintelineet.</div>
                 </div>
                 <div className="image-container">
                     <img src={pak2} width="500" alt="dj" className="LargeEquipmentImage"/>

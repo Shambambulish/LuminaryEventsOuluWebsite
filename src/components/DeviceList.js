@@ -98,7 +98,7 @@ const DeviceList = () => {
                     alert(response.data)
                     console.log(response.data)
                     console.log(response.status);
-                    if(response.status == 201){
+                    if(response.status === 201){
                         emailjs.init({
                             publicKey: process.env.REACT_APP_PUBLIC_KEY,
                             // Do not allow headless browsers
