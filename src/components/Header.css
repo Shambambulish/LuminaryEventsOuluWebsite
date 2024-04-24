@@ -24,17 +24,17 @@
     transform: scale(1.3, 1.3);
 }
 
-.css-6hp17o-MuiList-root-MuiMenu-list{
+.MuiMenu-list{
     background-color: #201C24;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
-.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
+.MuiMenu-paper{
     box-shadow: none !important;
     background-color: transparent !important;
 }
 
-.css-1uwgr7b-MuiTypography-root{
+.MuiTypography-root{
     white-space: nowrap;
     text-transform: uppercase;
     transition: font-weight 0.5s ease;
