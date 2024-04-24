@@ -52,7 +52,7 @@
   padding-left: 10px;
   grid-template-areas: 
     "selector picture name price"
-    "stock picture description price";
+    "stock picture name price";
 }
 
 .grid-container button {
@@ -87,9 +87,9 @@
     grid-area: picture;
 }
 .grid-item-3 {
-    margin-top: 15px;
+    margin-top: 42px;
     text-align: center;
-    font-size: 22px;
+    font-size: 45px;
     grid-area: name;
 }
 .grid-item-4 {
