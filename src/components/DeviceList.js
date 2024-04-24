@@ -255,7 +255,7 @@ const DeviceList = () => {
 
     return (
         <div>
-        <div class="text-container" style={{width: '60vw'}}>
+        <div class="text-container" style={{width: '85vw'}}>
 
             
         <div class="category-grid">
@@ -279,7 +279,7 @@ const DeviceList = () => {
             ))}
             </div>
         </div>
-        <div class="text-container" style={{width: '60vw'}}>
+        <div class="text-container" style={{width: '85vw'}}>
         
             {contents.length > 0 ? <div style={{"border-bottom": "1px solid white"}}> <div class="grid2-container">
                 <div class="grid2-item grid2-item-1" key={`content-1`}>Määrä</div>
