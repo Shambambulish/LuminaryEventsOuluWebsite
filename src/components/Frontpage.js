@@ -4,13 +4,20 @@ import "./Frontpage.css";
 import logo from "./img/logo.png";
 import logo2 from "./img/Logo2.png";
 import ConForm from "./ConForm";
+import carousel1 from "./img/carousel/carousel1.JPG";
+import carousel2 from "./img/carousel/carousel2.JPG";
+import carousel3 from "./img/carousel/carousel3.jpg";
+import carousel4 from "./img/carousel/carousel4.jpg";
+import carousel5 from "./img/carousel/carousel5.jpg";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 
 const Frontpage = () => {
-                //!!! banner grid not working quite as intended !!!
+
     return (
         <div className="background">
-            <Header/>
+            <Header/> 
             <div className="banner">
                 <div className="textblock">
                     <div className="slogan">Luminary Events Oulu, se täyden palvelun monipuolinen audiotalo.</div>
@@ -40,6 +47,23 @@ const Frontpage = () => {
                     </div>
                 </div>
             </div>
+            <Carousel className="carousel" dynamicHeight={true} infiniteLoop={true} showThumbs={false} autoPlay={true} stopOnHover={true} interval={10000} transitionTime={500}>
+                <div>
+                    <img src={carousel1} />
+                </div>
+                <div>
+                    <img src={carousel2} />
+                </div>
+                <div>
+                    <img src={carousel3} />
+                </div>
+                <div>
+                    <img src={carousel4} />
+                </div>
+                <div>
+                    <img src={carousel5} />
+                </div>
+            </Carousel>
             <div>
                 <div className="text-container">
                     <ConForm/>
