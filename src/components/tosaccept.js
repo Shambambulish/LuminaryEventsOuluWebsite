@@ -23,7 +23,7 @@ export default function AcceptTerms(props) {
 
   return (
     <React.Fragment>
-      <Dialog className="popup"
+      <Dialog id="popup" className="popup"
         open={open}
         
         onClose={handleClose}

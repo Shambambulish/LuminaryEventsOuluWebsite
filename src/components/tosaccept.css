@@ -1,4 +1,4 @@
-.css-bdhsul-MuiTypography-root-MuiDialogTitle-root{
+ .MuiDialogTitle-root{
     color: #F2F3F5 !important;
 }
 
@@ -12,11 +12,11 @@
     background-color: rgba(32, 28, 36, 0.65);
 }
 
-.css-1t1j96h-MuiPaper-root-MuiDialog-paper{
+  .MuiDialog-paper{
     background-color: #201C24 !important;
-}
 
-.css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+}
+#popup .MuiButton-root{
     background-color: #201C24 !important;
     box-shadow: #00000080 0px 0px 5px 3px !important;
     color: #F2F3F5 !important;
@@ -24,6 +24,9 @@
     font-weight: 600 !important;
 }
 
-.css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover{
+#popup .MuiButton-root:hover{
     background-color: #1d1920 !important;  
+}
+#popup .MuiTypography-root{
+    text-wrap: wrap;
 }

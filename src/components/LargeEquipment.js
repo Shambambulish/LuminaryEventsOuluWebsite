@@ -31,9 +31,9 @@ const LargeEquipment = () => {
                     Laitteiden Asennus 
                     </div>
                     <br/>
-                    <div className="subquestion">Paketin mukana sisältyvät myös valoja tarvittaessa lisähintaan </div>
+                    <div className="subquestion">Lisähinnasta pakettiin voidaan myös sisällyttää valoja</div>
                     <br/>
-                    <div className="subquestion">Vuokraan kuuluu tarvittavat kaapelit ja tavalliset kaiutintelineet.</div>
+                    <div className="subquestion">Vuokraan kuuluu tarvittavat kaapelit ja kaiutintelineet</div>
                     
                 </div>
                 <div className="image-container">
@@ -60,9 +60,9 @@ const LargeEquipment = () => {
                     Laitteiden Asennus 
                     </div>
                     <br/>
-                    <div className="subquestion">Paketin mukana sisältyvät myös valoja tarvittaessa lisähintaan </div>
+                    <div className="subquestion">Lisähinnasta pakettiin voidaan myös sisällyttää valoja</div>
                     <br/>
-                    <div className="subquestion">Vuokraan kuuluu tarvittavat kaapelit ja tavalliset kaiutintelineet.</div>
+                    <div className="subquestion">Vuokraan kuuluu tarvittavat kaapelit ja kaiutintelineet</div>
                 </div>
                 <div className="image-container">
                     <img src={pak2} width="500" alt="dj" className="LargeEquipmentImage"/>
