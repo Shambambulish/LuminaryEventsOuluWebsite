@@ -30,3 +30,8 @@ The main goal for the project was to have a functioning and a good looking websi
 </table>
 
 <h2 align="center"><em>Build</em></h2>
+
+<p align="center">
+The original prototyping was done with Figma and the
+  website was created using React. For backend we used cPanel
+<p align="center">
