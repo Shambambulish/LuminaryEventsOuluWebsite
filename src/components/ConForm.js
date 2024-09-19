@@ -87,9 +87,7 @@ function ConForm(){
             // alla errori tulee alerttiin, lähinnä muistin varalta ovat tossa
             axios.post(url,body)
                   .then((response) => {
-                    alert(response.data)
-                    console.log(response.data)
-                    console.log(response.status);
+                      alert("Yhteydenotto vastaanotettu!")
                     if(response.status == 201){
                         emailjs.init({
                             publicKey: process.env.REACT_APP_PUBLIC_KEY,
@@ -115,7 +113,6 @@ function ConForm(){
                             process.env.REACT_APP_PUBLIC_KEY
                         )
                         .then((result) => {
-                            console.log(result);
                         }, (error) => {
                             console.log(error);
                         });
