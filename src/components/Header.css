@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.MuiAppBar-root{
+    background-color: #201C24 !important;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    margin-bottom: 3em;
+}
+
+.css-1okphcq{
+    margin-left: 1em;
+}
+.css-127jcgp{
+    transform:scale(0.9, 0.9);
+    transition: 0.5s ease;
+}
+.css-127jcgp:hover{
+    transform:scale(1, 1);
+}
+.css-1e0d89p-MuiButtonBase-root-MuiIconButton-root{
+    transition: transform 0.5s ease-in-out;
+}
+.css-1e0d89p-MuiButtonBase-root-MuiIconButton-root:hover{
+    transform: scale(1.3, 1.3);
+}
+
+.MuiMenu-list{
+    background-color: #201C24;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.MuiMenu-paper{
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
+.MuiTypography-root{
+    white-space: nowrap;
+    text-transform: uppercase;
+    transition: font-weight 0.5s ease;
+    font-family: Quicksand, sans-serif !important;
+    font-weight: 350;
+    font-size: 1.3em;
+    margin-right: 1.5em;
+    color: #F2F3F5;
+}
+
+.css-1uwgr7b-MuiTypography-root:hover{
+color: #F2F3F5;
+animation: forwards fadeIn 0.5s;
+font-weight: 600;
+}
+
+.css-1kmstqv{
+    transform:scale(1, 1);
+    transition: 0.5s ease; 
+}
+.css-1kmstqv:hover{
+    transform:scale(1.1, 1.1);
+}

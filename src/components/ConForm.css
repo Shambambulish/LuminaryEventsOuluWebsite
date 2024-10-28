@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+.conformbg{
+  overflow: hidden;
+}
+.contact-form {
+    transform:scale(1, 1);
+    font-family: Quicksand, sans-serif !important;
+    display: flex;
+    justify-content:center;
+    color: white;
+    font-size:1.1em;
+    text-align:center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    transition: transform 0.5s ease-in-out;
+}
+.head{
+  display: flex;
+  margin-left: 0.5em;
+  white-space: nowrap;
+}
+.textbox{
+  margin-left: -2em;
+  margin-right: 4em;
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+.messagebox{
+  display: flex;
+  flex-direction: column;
+  margin-right: 4em;
+  margin-top: 4.9em;
+}
+
+.buttonbox{
+  display: flex;
+  margin-top: 17.6em;
+  margin-left: 3em;
+  margin-right: 2em;
+}
+
+.nappi {
+  transition: transform 0.5s ease-in-out;
+  transition: scale 0.5s ease;
+  background-color: #201C24;
+  border: none;
+  color: white;
+  padding: 2em;
+  display: flex;
+  border-radius: 20px;
+  bottom: 33.3%;
+  position: fixed;
+}
+.nappi2 {
+  background-color: #28282e; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  border-radius: 10px;
+  position:relative;
+}
+
+.nappi:hover {
+  transition: 0.5s ease;
+  transform:scale(1.1, 1.1);
+  background-color: #110f16; /* Green */
+  color: white;
+}
+.messagefield{
+  height: 42%;
+  border-radius: 8px;
+  display: flex;
+  margin: 0.5em;
+  margin-left: 0.5em;
+  font-family: Quicksand, sans-serif !important;
+  border-radius: 8px;
+  padding: 0.5em;
+  font-size: 1em;
+}
+.textfield {
+  width: 75%;
+  font-family: Quicksand, sans-serif !important;
+  border-radius: 8px;
+  padding: 0.9em;
+  padding-right: 5em;
+  margin: 0.5em;
+  font-size: 1em;
+}
+.datefield {
+  width: 75%;
+  font-family: Quicksand, sans-serif !important;
+  border-radius: 8px;
+  padding: 0.9em;
+  padding-right: 5em;
+  margin: 0.5em;
+  font-size: 1em;
+}
+
+.react-datepicker-wrapper,
+.react-datepicker {
+  font-family: Quicksand, sans-serif !important;
+  text-transform: capitalize;
+  border: none !important;
+}
+.react-datepicker__month-container {
+  border-radius: 2%;
+  border: 2px solid #a2a2a3d3 !important;
+}
+.react-datepicker__day--in-range:hover,
+.react-datepicker__day--in-range{
+  background-color: #7e7e7e !important;
+}
+.react-datepicker__day--today{
+  border-radius: 0.3rem;
+  background-color: #cccccc !important;
+}
+.react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range, 
+.react-datepicker__month-text--in-range, 
+.react-datepicker__quarter-text--in-range, .react-datepicker__year-text--in-range){
+  background-color: #7e7e7e !important;
+}
+
+
+.react-datepicker__close-icon::after{
+  background-color: #7e7e7e !important;
+  font-size: medium !important;
+}
+.react-datepicker__close-icon{
+  color: #7e7e7e !important;
+  
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+  .contact-form {
+    transition: 0.5s ease; 
+    scale: 0.8;
+  }
+  .messagefield{
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    margin: 0.5em;
+    margin-left: 1em;
+    min-width: 3.5em;
+  }
+  .nappi {
+    margin-right: 0.25em;
+    margin-left: 0.25em;
+  }
+  .textbox{
+    margin-left: -2em;
+    margin-right: 2em;
+    margin-top: 0.5em;
+  }
+  .messagebox{
+    width: 50%;
+    margin-top: 4.5em;
+  }
+  .textfield {
+    width: 50%;
+  }
+  .datefield {
+    width: 50%;
+  }
+  .buttonbox{
+    margin-left: 0.5em;
+    margin-right: 3em;
+  
+  }
+  
+}
+
+
+
+@media only screen and (max-width: 650px) {
+  .head{
+    margin-top: 2em;
+    margin-left: 0;
+    margin-bottom: 1em;
+  }
+  .contact-form {
+    transition: 0.5s ease; 
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -5em;
+  }
+
+  .nappi {
+    padding-bottom: 2em;
+    margin-right: 0em;
+    margin-left: 0em;
+    margin-top: 2em;
+    bottom: 0;
+    position: relative;
+  }
+  .textbox{
+    align-items: center;
+    margin-left: 2.5em;
+    margin-right: 2em;
+  }
+  .messagebox{
+    display: flex;
+    width: 80%;
+    align-self: center;
+    margin-top: -1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .buttonbox{
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: -4em;
+  }
+  .textfield {
+    width: 75%;
+  }
+  .react-datepicker__input-container,
+  .react-datepicker-wrapper{
+    width: 100%;
+    display: flex;
+  }
+  .datefield {
+    margin-left: -0.5em;
+    width: 80%;
+  }
+  .messagefield{
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 0.5;
+  }
+}

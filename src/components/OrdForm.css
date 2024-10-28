@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.ordconformbg{
+  overflow: hidden;
+}
+.order-form {
+    transform:scale(1, 1);
+    font-family: Quicksand, sans-serif !important;
+    display: flex;
+    justify-content:center;
+    color: white;
+    font-size:1.1em;
+    position: relative;
+    text-align:center;
+    margin-bottom: 2em;
+    transition: transform 0.5s ease-in-out;
+}
+.ordtextbox{
+  margin-left: -2em;
+  margin-right: 4em;
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+.ordrightbox{
+    margin-left:  1em;
+    margin-right: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: fit-content;
+    margin-top: 0.5em;
+}
+.ordbuttonbox{
+  display: flex;
+  margin-top: 17.6em;
+  margin-left: 3em;
+  margin-right: 2em;
+}
+.ordnappi {
+  transition: transform 0.5s ease-in-out;
+  transition: scale 0.5s ease;
+  background-color: #201C24;
+  border: none;
+  color: white;
+  padding: 2em;
+  display: flex;
+  border-radius: 20px;
+  bottom: 33.3%;
+  position: fixed;
+}
+.ordnappi:hover {
+  transition: 0.5s ease;
+  transform:scale(1.1, 1.1);
+  background-color: #110f16; /* Green */
+  color: white;
+}
+.ordtextfield {
+  width: 65%;
+  font-family: Quicksand, sans-serif !important;
+  border-radius: 8px;
+  padding: 0.9em;
+  padding-right: 5em;
+  margin: 0.5em;
+  font-size: 1em;
+}
+.items{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.rightdate{
+  margin-right: 1em;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: fit-content;
+}
+.datefield {
+  width: 75%;
+  font-family: Quicksand, sans-serif !important;
+  border-radius: 8px;
+  padding: 0.9em;
+  padding-right: 5em;
+  margin: 0.5em;
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 1200px) {
+  .order-form {
+    transition: 0.5s ease; 
+    scale: 0.8;
+  }
+  .ordnappi {
+    margin-right: 0.25em;
+    margin-left: 0.25em;
+  }
+  .ordtextbox{
+    width: 80%;
+    margin-top: 0.5em;
+  }
+  .ordrightbox{
+    width: 80%;
+  }
+  .ordbuttonbox{
+    margin-left: 0.5em;
+    margin-right: 3em;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .order-form {
+    transition: 0.5s ease; 
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+  }
+  .ordnappi {
+    padding-bottom: 2em;
+    margin-right: 0em;
+    margin-left: 0em;
+    margin-top: 2em;
+    bottom: 0;
+    position: relative;
+  }
+  .ordrightbox{
+    width: 80%;
+    align-self: center;
+    align-items: center;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  .rightdate{
+    width: 100%;
+    order: -1;
+    align-items: center;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  .ordtextbox{
+    width: 80%;
+    align-self: center;
+    align-items: center;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  .ordbuttonbox{
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: -10%;
+  }
+  .ordtextfield {
+    width: 75%;
+  }
+  
+}
